@@ -91,6 +91,7 @@ body{
     margin-right: 10px;
     border-radius: 20px 0px;
 }
+
 img{
     margin: 0px;
     padding: 0px;
@@ -100,6 +101,20 @@ img{
     font-size: 7em;
     position: relative;
 }
+
+@media screen and (max-width: 750px) and (min-width:450px){
+    #sobremim{
+        font-size: 5em;
+    }
+    #sobremimp{
+        font-size: 16px;
+        width: 100%;
+    }
+    #preenchimentodosobremim{
+        width: 460px;
+    }
+}
+
 @media screen and (min-width:1400px) {
     #sobremim{
         font-size: 7.3em;
