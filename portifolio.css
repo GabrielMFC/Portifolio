@@ -163,7 +163,7 @@ hr{
     cursor: pointer;
 }
 #descricaohtml{
-    display: inline-block;
+    display: block;
     position: absolute;
     right: 130px;
     top: 50px;
@@ -176,22 +176,34 @@ hr{
     #posicionarskils{
         position: absolute;
         top: 450px;
-        left: 50%;
-        right: 50%;
+        left: 60%;
         text-align: center;
         justify-content: center;
         margin: auto;
         place-items: center;
         align-items: center;
         display: block;
+        margin-top: 60px;
 
     }
+    #Habilidades{
+        position: absolute;
+        top: 350px;
+        text-align: center;
+        place-content: center;
+        margin: auto;
+        width: 30px;
+        right: 290px;
+        font-size: 3em;
+        margin-bottom: 100px;
+    }
 }
-@media screen and (max-width: 750px) and (min-width: 450px){
+
+@media screen and (max-width: 750px){
     #perguntadevjuniorh1{
         text-align: center;
         padding-left: 0px;
-        font-size: 30px;
+        font-size: 25px;
     }
     body{
         width: 100%;
@@ -203,11 +215,24 @@ hr{
         position: relative;
     }
     #preenchimentodosobremim{
-        width: 400px;
+        width: 350px;
         
     }
     #perguntadevjunior{
-        width: 100%;
+        background:linear-gradient(to right, var(--cinza), var(--preto));
+    width: 100%;
+    position: relative;
+    bottom: 22px;
+    height: 85px;
+    text-align: center;
+    place-content: center;
+    margin: auto;
+    }
+    #descricaohtml{
+        display: block;
+        font-size: 13px;
+        position: relative;
+        top: -140px;
     }
 }
 /*
