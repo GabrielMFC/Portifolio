@@ -21,34 +21,30 @@
             <div id="posicionarskils">
                 <h2 id="Habilidades">Habilidades:</h2>
                 <div id="issoeumacamera"><div id="issoealente"></div></div>
-            <img class="imgtamanho" src="htmlicon.png">
+            
+                <img class="imgtamanho" id="imghtml" src="htmlicon.png">
+                <p id="descricaohtml">...</p>
+   
         </div>
     
         <!--HTML-->
         <!--HTML é uma linguagem de marcação utilizada para adicionar elementos em sua página tais como imagens,paragráfos,títulos,dentre outros. -->
         <script>
-            /*
-            const html_icon = document.getElementById("html_icon")
-            let titulohtml = document.getElementById("htmltitulo")
-            let descricaohtml = document.getElementById("descricaohtml")
-            let divdotxt = document.getElementById("texto")
+            const imghtml = document.getElementById("imghtml")
+            let pdohtml = document.getElementById("descricaohtml")
+            let valor = true
+            let valorvef = true
 
-            let isHTML = true
-
-html_icon.addEventListener("click", function(){
-    if(!isHTML){
-        isHTML = true
-        titulohtml.innerHTML = null
-            descricaohtml.innerHTML = null
-            divdotxt.style.backgroundColor = null
-    } else {
-        divdotxt.style.backgroundColor = "gray"
-        titulohtml.innerHTML = "HTML"
-        descricaohtml.innerHTML = "HTML é uma linguagem de marcação utilizada para adicionar elementos em sua página tais como imagens,paragráfos,títulos,dentre outros."
-            
-            isHTML = false
-    }
-})*/
+            imghtml.addEventListener("click", function chamar_p_do_html() {
+                if(valor == true) {
+                pdohtml.innerHTML = "HTML: É uma linguagem de marcação utilizada para adicionar elementos em sua página tais como imagens,paragráfos,títulos,dentre outros."
+                valor = false
+                console.log(valor)
+                }else{
+                    pdohtml.innerHTML = "..."
+                    valor = true
+                }
+            })
         </script>
 </body>
 </html>
