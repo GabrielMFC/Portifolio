@@ -159,45 +159,56 @@ img{
 hr{
     width: 95%;
 }
-
-#preenchimentodasskils{
-    margin: 0px;
-    padding: 0px;
-    width: 200px;
-    height: 100px;
-    background-color: #009929;
-    align-items: center;
-    margin: auto;
+#issoeumacamera{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--preto);
     text-align: center;
-    place-items: center;
-    justify-content: center;
-    position: absolute;
-    left: 50%;
-    right: 50%;
-    top: 400px;
-}*/
-#skils{
-    margin: 0px;
-    padding: 0px;
-    width: 0px;
-    height: 0px;
     align-items: center;
-    margin: auto;
-    text-align: center;
-    display: flex;
-    place-items: center;
     justify-content: center;
-    position: absolute;
-    left: 50%;
-    right: 50%;
-    top: 400px;
-    background: linear-gradient(var(--verde_claro));
+    margin: auto;
+    margin-top: 10px;
 }
-.imgicon{
-    display: inline-block;
+#issoealente{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+    margin: auto;
+}
+.imgtamanho{
+    margin: 0px;
+    display: block;
     width: 100px;
     height: 100px;
-    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+    padding-left: 10px;
+}
+#posicionarskils{
+    background:linear-gradient(to bottom,black, var(--cinza),var(--preto),gray,rgb(69, 68, 68));
+    width: 105px;
+    height: 500px;
+    position: absolute;
+    left: 1350px;
+    border-radius: 20px;
+}
+
+#Habilidades{
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-right: 45px;
+    font-size: 2em;
+    width: 100%;
+    text-align: right;
+    text-decoration: underline;
+}
+.habilidades:hover{
+    transform: scale(1.9);
 }
 /*
 Uma possível linha verde perto do <hr> que está em baixo do "Sobre mim"
