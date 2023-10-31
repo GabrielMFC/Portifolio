@@ -37,15 +37,6 @@ body{
     background-color: var(--verde_medio);
     border-radius: 4px;
 }
-/*dimensoes: 360x640*/
-@media screen and (max-width: 640px) and (max-height:640px) {
-    body{
-        margin-left: 0px;
-        margin-right: 0px;
-        padding: 0px;
-    }
-    
-}
 #pergunta{
     color:white;
     font-weight: bold;
@@ -58,12 +49,7 @@ body{
     font-weight: bold;
     padding-left: 20px;
 }
-@media screen and (max-width: 750px) and (min-width:450px){
-    #perguntadevjuniorh1{
-        text-align: center;
-        padding-left: 0px;
-    }
-}
+
 #center{
     text-align: center;
     justify-content: center;
@@ -103,46 +89,6 @@ img{
     color: white;
     font-size: 7em;
     position: relative;
-}
-
-@media screen and (max-width: 750px) and (min-width:450px){
-    #sobremim{
-        font-size: 5em;
-    }
-    #sobremimp{
-        font-size: 16px;
-        width: 100%;
-    }
-    #preenchimentodosobremim{
-        width: 460px;
-    }
-    #perguntadevjunior{
-        height: 130px;
-        width: 100%;
-        position: relative;
-        left: 40px;
-        margin-left: 0px;
-        margin-right:0px;
-        box-sizing: border-box;
-        left: 0;
-    }
-}
-
-@media screen and (min-width:1400px) {
-    #sobremim{
-        font-size: 7.3em;
-    }
-    #sobremimp{
-        font-size: 25px;
-    }
-    #center{
-        position: absolute;
-    left: 35%;
-    right: 50%;
-    }
-    #preenchimentodosobremim{
-        height: 330px;
-    }
 }
 .text{
     padding: 5px;
@@ -226,11 +172,42 @@ hr{
     border-radius: 20px 20px 0px 20px;
     font-weight: bold;
 }
-@media screen and (max-width: 750px) and (min-width:450px) {
+@media screen and (max-width: 750px) {
     #posicionarskils{
         position: absolute;
-        left: 70%;
         top: 450px;
+        left: 50%;
+        right: 50%;
+        text-align: center;
+        justify-content: center;
+        margin: auto;
+        place-items: center;
+        align-items: center;
+        display: block;
+
+    }
+}
+@media screen and (max-width: 750px) and (min-width: 450px){
+    #perguntadevjuniorh1{
+        text-align: center;
+        padding-left: 0px;
+        font-size: 30px;
+    }
+    body{
+        width: 100%;
+        overflow-x: hidden;
+    }
+    #sobremim{
+        color: white;
+        font-size: 4em;
+        position: relative;
+    }
+    #preenchimentodosobremim{
+        width: 400px;
+        
+    }
+    #perguntadevjunior{
+        width: 100%;
     }
 }
 /*
