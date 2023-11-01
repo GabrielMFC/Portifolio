@@ -104,8 +104,27 @@ img{
     word-wrap: break-word;
 }
 hr{
+    border-style: solid;
     width: 95%;
+    border-color: var(--verde_medio);
+    animation: brilho 20s infinite;
+    display: block;
+    box-shadow: 0 0 9px var(--verde_claro);
 }
+
+/*
+@keyframes brilho{
+    10%{filter: blur(1px);border-color: var(--verde_medio)}
+    20%{filter: blur(2px);border-color: var(--verde_claro);}
+    30%{filter: blur(2px);border-color: var(--verde_escuro)}
+    40%{filter: blur(1px);border-color: var(--verde_claro)}
+    50%{filter: blur(2px);border-color: var(--verde_medio)}
+    60%{filter: blur(1px);border-color: var(--verde_escuro)}
+    70%{filter: blur(2px);border-color: var(--verde_claro)}
+    80%{filter: blur(1px);border-color: var(--verde_medio)}
+    90%{filter: blur(2px);border-color: var(--verde_escuro)}
+    100%{filter: blur(1px);border-color: var(--verde_claro)}
+}*/
 #issoeumacamera{
     width: 20px;
     height: 20px;
@@ -134,7 +153,7 @@ hr{
     justify-content: center;
     padding-top: 15px;
     padding-left: 10px;
-    transition: transform 0.4s;
+    transition: transform 0.5s;
 }
 #posicionarskils{
     background:linear-gradient(to bottom,black, var(--cinza),var(--preto),gray,rgb(69, 68, 68));
@@ -149,17 +168,17 @@ hr{
 #Habilidades{
     color: white;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     font-size: 2em;
     width: 100%;
     text-align: right;
     text-decoration: underline;
     position: relative;
-    bottom: 55px;
+    bottom: 20px;
     right: 40px;
 }
 .imgtamanho:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     cursor: pointer;
 }
 #descricaohtml{
@@ -172,6 +191,53 @@ hr{
     border-radius: 20px 20px 0px 20px;
     font-weight: bold;
 }
+
+@media screen and (max-width: 320px) {
+    #perguntadevjunior{
+        position: relative;
+        top: 0px;
+        width: 100%;
+    }
+    #perguntadevjuniorh1{
+        font-size: 20px;
+        position: absolute;
+        bottom: 30px;
+    }
+    #sobremim{
+        color: white;
+        font-size: 3em;
+        position: relative;
+    }
+    #preenchimentodosobremim{
+       width: 280px;
+    }
+    #Habilidades{
+        position: absolute;
+        top: 500px;
+        text-align: center;
+        place-content: center;
+        margin: auto;
+        width: 30px;
+        right: 250px;
+        font-size: 3em;
+        margin-bottom: 100px;
+    }
+    hr{
+        border-color: var(--verde_medio);
+        width: 100%;
+        position: relative;
+        top: 40px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #sobremim{
+        color: blue;
+        font-size: 5px;
+        position: relative;
+    }
+}
+
 @media screen and (max-width: 750px) {
     #posicionarskils{
         position: absolute;
@@ -203,7 +269,7 @@ hr{
     #perguntadevjuniorh1{
         text-align: center;
         padding-left: 0px;
-        font-size: 25px;
+        font-size: 24px;
     }
     body{
         width: 100%;
@@ -215,8 +281,7 @@ hr{
         position: relative;
     }
     #preenchimentodosobremim{
-        width: 350px;
-        
+        width: 321px;
     }
     #perguntadevjunior{
         background:linear-gradient(to right, var(--cinza), var(--preto));
@@ -234,7 +299,19 @@ hr{
         position: relative;
         top: -140px;
     }
+    hr{
+        border-color: var(--verde_medio);
+        width: 100%;
+        position: relative;
+        top: 40px;
+    }
+    #Habilidades{
+        position: absolute;
+        top: 400px;
+    }
 }
+
+
 /*
 Uma possível linha verde perto do <hr> que está em baixo do "Sobre mim"
 
