@@ -1,0 +1,56 @@
+*{
+    margin: 0px;
+}
+:root{
+    --cinza:#413e40;
+    --preto:#121012;
+    --verde_claro:#5ccb5f;
+    --verde_medio:#009929;
+    --verde_escuro:#006414;
+}
+html, body{
+    height: 100%;
+    padding: 0px;
+}
+h1{
+    color: white;
+    text-align: center;
+    padding-top: 29px;
+}
+.navbar{
+    display: block;
+    background:linear-gradient(to right, black, var(--cinza));
+    height: 15%;
+}
+.marcatexto{
+    background-color: var(--verde_medio);
+    border-radius: 10px;
+    padding: 3px;
+}
+
+/* Sobre mim */
+#CENTRALIZAESSAMERDA{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sobremim{
+    width: 50%;
+    background: linear-gradient(to right, var(--preto), var(--cinza), rgba(105, 104, 104, 0.841));  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+#sobremimcontent{
+    width: 85%;
+    background-color: white;
+    border-radius: 10px 0px;
+    padding: 10px;
+}
+#SOBREMIMH2{
+    font-size: 4em;
+}
+#SOBREMIMP{
+    font-size: 25px;
+}

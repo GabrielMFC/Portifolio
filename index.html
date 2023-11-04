@@ -3,54 +3,370 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portifólio</title>
-    <link rel="stylesheet" href="portifolio.css">
-</head>
-<body>   
-        <div id="perguntadevjunior"><h1 id="perguntadevjuniorh1"><span id="pergunta">Pergunta:</span> Somente um <span class="marcatexto">dev júnior?</span></h1></div>
+    <title>Tela de login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <style>
         
-            <div id="center">
-                <div id="preenchimentodosobremim">
-                    <h1 id="sobremim">Sobre mim:</h1>
-                    <p id="sobremimp">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus dicta sequi soluta fugit? Minima incidunt sit cum magni quas, blanditiis nemo ipsam perferendis esse, repudiandae, itaque dignissimos reiciendis voluptas voluptatum?</p>
-                </div>
-                <hr>
-                <span id="spancor"></span>
-            </div>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
 
+        body, html{
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        video{
+            margin: 0px;
+            padding: 0px;
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            background-size: cover;
+            overflow: hidden;
+            object-fit: contain;
+            z-index: -1;
+            filter: blur(2px);
+        }
+        .tela-de-loginflex {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            place-items: center;
+            z-index: 2;
+        }
+        #tela-de-login{
+            width: 50%;
+            height: 50%;
+            background-color: rgba(128, 128, 128, 0.723);
+            z-index: 2;
+            border-radius: 0px 20px 0px 20px;
+            display: flex;
+            justify-content: center;
+            padding-top: 3%;
+            animation: bordercolor 5s infinite;
+            border: solid 1px white;
+            overflow: hidden;
+        }
+        @keyframes bordercolor{
+            10%{
+                border: groove 1px yellowgreen;
+            }
+            50%{
+                border: groove 3px gray;
+            }
+            99%{
+                border: groove 1px red;
+            }
+            100%{
+                border: groove 3px white
+            }
+        }
+        #opcoesdelogin1{
+            display: flex;
+            justify-content: left;
+            height: 100%;
+            width: 100%;
+            padding: 15px;
+        }
+        h2{
+            color: white;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        #sejabemvindo{
+            background-color: gray;
+            width: 100%;
+            padding: 10px;
+            border-radius: 20px 0px 0px 20px;
+        }
+        input{
+            border-radius: 10px;
+            border-color: white;
+            border: solid 2px black;
+        }
+        .marcador{
+            color: white;
+        }
+        #celular{
+            margin: 0px;
+            padding: 0px;
+            height: 100%;
+            width: 100%;
+            background-color: rgb(63, 63, 63);
+            rotate: 150deg;
+            z-index: -10;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 0  3px black;
+        }
+        #camera{
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            position: absolute;
+            right: 50%;
+            left: 50%;
+            top: 1%;
+        }
+        #teladocelular{
+            width: 80%;
+            height: 90%;
+            background-color: black;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .codemain{
+            color: greenyellow;
+            visibility: hidden;
+            display: block;
             
-                <div id="responsividade-e-dificil">
-                    <h2 id="Habilidades">Habilidades:</h2>
+        }
+        .codemain::before{
+            content: "";
+            visibility: visible;
+            display: block;
+            position: absolute;
+        }
+        .code{
+            color: greenyellow;
+            font-family: 'Encode Sans Condensed', sans-serif;
+            font-weight: bold;
+            transform: rotate(180deg);
+        }
+        .codefalse{
+            color: red;
+            font-family: 'Encode Sans Condensed', sans-serif;
+            font-weight: bold;
+            transform: rotate(180deg)     
+        }
+        .code1::before{
+            content: "user1=z*99821";
+            display: block;
+            animation: typingcode 5s infinite;
+        }
+        .code2::before{
+            content: "user2=z+97152";
+            display: block;
+            animation: typingcode2 5s infinite;
+        }.code3::before{
+            content: "user3=abc0101";
+            display: block;
+            animation: typingcode 10s infinite;
+        }.code4::before{
+            content: "user4=mac0n44";
+            display: block;
+            animation: typingcode2 15s infinite;
+        }.code5::before{
+            content: "user5=allowuser-2";
+            display: block;
+            animation: typingcode 20s infinite;
+        }.code6::before{
+            content: "user6=ERRorNotFOUnd";
+            display: block;
+            animation: typingcode2 25s infinite;
+        }.code7::before{
+            content: "user7=01+guanauser2";
+            display: block;
+            animation: typingcode 7s infinite;
+        }.code8::before{
+            content: "user8=01+02*01";
+            display: block;
+            animation: typingcode2 8s infinite;
+        }
+        .code9::before{
+            content: "user9=GgEzComuser01";
+            display: block;
+            animation: typingcode 9s infinite;
+        }
+        
+        #botaodeok{
+            width: 100px;
+            height: 40px;
+            border-radius: 0px 20px 20px 20px;
+            font-size: 10px;
+            text-align: center;
+            border: none;
+            margin-top: 3%;
+            margin-left: 5%
+        }
+        @keyframes typingcode{
+            100%{
                 
-            
-            <div id="posicionarskils">
+            content: "Acess Guaranted";
+        }}
+    
+        @keyframes typingcode2{
+            100%{
                 
-                <div id="issoeumacamera"><div id="issoealente"></div></div>
-            
-                <img class="imgtamanho" id="imghtml" src="htmlicon.png">
-                <p id="descricaohtml">...</p>
-   
-        </div>
+            content: "Acess Blocked";
+        }}
+
+        @media screen and (min-width: 300px ) and (max-width: 420px){
+            .tela-de-loginflex {
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+        #tela-de-login{
+            width: 90%;
+            height: 50%;
+            background-color: rgba(128, 128, 128, 0.723);
+            z-index: 2;
+            border-radius: 0px 20px 0px 20px;
+            justify-content: center;
+            padding-top: 3%;
+            animation: bordercolor 5s infinite;
+            border: solid 1px white;
+            overflow: hidden;
+        }
+
+        .code1::before{
+            content: "user1=z*99821";
+            display: block;
+            animation: typingcode 5s infinite;
+        }
+        .code2::before{
+            content: "user2=NotFOUnd.";
+            display: block;
+            animation: typingcode2 5s infinite;
+        }.code3::before{
+            content: "user3=abc0101";
+            display: block;
+            animation: typingcode 10s infinite;
+        }.code4::before{
+            content: "user4=NotFOUnd.";
+            display: block;
+            animation: typingcode2 15s infinite;
+        }.code5::before{
+            content: "user5=allowuser-2";
+            display: block;
+            animation: typingcode 20s infinite;
+        }.code6::before{
+            content: "user6=NotFOUnd.";
+            display: block;
+            animation: typingcode2 25s infinite;
+        }.code7::before{
+            content: "user7=01+guanauser2";
+            display: block;
+            animation: typingcode 7s infinite;
+        }.code8::before{
+            content: "user8=01+02*01";
+            display: block;
+            animation: typingcode2 8s infinite;
+        }
+        .code9::before{
+            content: "user9=ggezcom991";
+            display: block;
+            animation: typingcode 9s infinite;
+        }
+
+        #teladocelular{
+            width: 150px;
+            height: 90%;
+            background-color: black;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        }
+
+        @media screen and (max-width: 650px) {
+            #celular{
+            margin: 0px;
+            padding: 0px;
+            height: 100%;
+            width: 1010%;
+            z-index: -10;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+        }
+        @media screen and (min-width: 421px) and (max-width: 755px){
+            #teladocelular{
+            width: 150px;
+            height: 90%;
+            background-color: black;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        }
+        @media screen and (min-width: 920px){
+            #tela-de-login{
+                width: 40%;
+                height: 40%;
+            }
+        }
+        @media screen and (min-width: 1100px){
+            #sejabemvindo{
+                border-radius: 20px 20px 20px 20px;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <div>
+        <video src="4к Screensaver of Computer programming code text Background Video VJ Loop Animation.mp4" autoplay loop muted >
     </div>
     
-        <!--HTML-->
-        <!--HTML é uma linguagem de marcação utilizada para adicionar elementos em sua página tais como imagens,paragráfos,títulos,dentre outros. -->
-        <script>
-            const imghtml = document.getElementById("imghtml")
-            let pdohtml = document.getElementById("descricaohtml")
-            let valor = true
-            let valorvef = true
+        <div class="tela-de-loginflex">  
+                <div id="tela-de-login">
+                    <!-- Celular -->
+                    <div id="celular">
 
-            imghtml.addEventListener("click", function chamar_p_do_html() {
-                if(valor == true) {
-                pdohtml.innerHTML = "HTML: É uma linguagem de marcação utilizada para adicionar elementos em sua página tais como imagens,paragráfos,títulos,dentre outros."
-                valor = false
-                console.log(valor)
-                }else{
-                    pdohtml.innerHTML = "..."
-                    valor = true
-                }
-            })
-        </script>
+                        <div id="teladocelular">
+                            <div id="camera"></div>
+                            <h1 class="codemain"></h1>
+
+                            <p class="code1 code"></p>
+
+                            <p class="code2 codefalse"></p>
+
+                            <p class="code3 code"></p>
+
+                            <p class="code4 codefalse"></p>
+
+                            <p class="code5 code"></p>
+
+                            <p class="code6 codefalse"></p>
+
+                            <p class="code7 code"></p>
+
+                            <p class="code8 codefalse"></p>
+
+                            <p class="code9 code"></p>
+
+                        </div>
+                    </div>
+
+                    <div id="opcoesdelogin1">
+                    <!-- Input pra digitar nome -->
+                        <div id="nome">
+                            <h2 id="sejabemvindo"><span class="marcador">Seja</span> bem <span class="marcador">vindo(a)</span></h2>
+                            <input type="text" placeholder="Digite seu nome...">
+                            <button id="botaodeok">Enviar</button>
+                        </div>
+                        
+                    </div>
+        </div>
+    </div>
 </body>
 </html>
