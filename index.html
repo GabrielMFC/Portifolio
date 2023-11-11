@@ -127,7 +127,7 @@
         #teladocelular{
             width: 80%;
             height: 90%;
-            background-color: black;
+            background-color: rgb(0, 0, 0);
             border-radius: 10px;
             overflow: hidden;
         }
@@ -279,12 +279,25 @@
         #teladocelular{
             width: 150px;
             height: 90%;
-            background-color: black;
             border-radius: 10px;
             overflow: hidden;
         }
         }
 
+        @media screen and (min-width: 492px) and (max-width: 535px) {
+            #tela-de-login{
+                width: 70%;
+                height: 50%;
+            }
+            #sejabemvindo{
+            width: 100%;
+            padding: 10px;
+            border-radius: 20px 20px 20px 20px;
+            position: relative;
+            right: 20px;
+        }
+            }
+        
         @media screen and (max-width: 650px) {
             #celular{
             margin: 0px;
@@ -319,12 +332,33 @@
                 border-radius: 20px 20px 20px 20px;
             }
         }
+        @media screen and (min-width: 1500px) {
+            #celular{
+            height: 100%;
+            width: 50%;
+        }
+        #sejabemvindo{
+            width: 100%;
+            padding: 10px;
+            border-radius: 20px 20px 20px 20px;
+            position: relative;
+            left: 20px;
+        }
+        #digitarnome{
+            position: relative;
+            left: 10%;
+        }
+        #botaodeok{
+            position: relative;
+            left: 10%;
+        }
+        }
     </style>
     
 </head>
 <body>
     <div>
-        <video src="videodedigitarcodigo.mp4" autoplay loop muted >
+        <video src="ideodedigitarcodigo.mp4" autoplay loop muted >
     </div>
     
         <div class="tela-de-loginflex">  
@@ -361,7 +395,7 @@
                     <!-- Input pra digitar nome -->
                         <div id="nome">
                             <h2 id="sejabemvindo"><span class="marcador">Seja</span> bem <span class="marcador">vindo(a)</span></h2>
-                            <input type="text" placeholder="Digite seu nome...">
+                            <input id="digitarnome" type="text" placeholder="Digite seu nome...">
                             <button id="botaodeok">Enviar</button>
                         </div>
                         
