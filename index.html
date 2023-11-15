@@ -43,17 +43,27 @@
 
                         </div>
                     </div>
-
+                    
                     <div id="opcoesdelogin1">
-                    <!-- Input pra digitar nome -->
                         <div id="nome">
                             <h2 id="sejabemvindo"><span class="marcador">Seja</span> bem <span class="marcador">vindo(a)</span></h2>
                             <input id="digitarnome" type="text" placeholder="Digite seu nome...">
-                            <button id="botaodeok">Enviar</button>
+                            <a href="portifolio.html">
+                                <button id="botaodeok">Enviar</button>
+                            </a>
                         </div>
                         
                     </div>
         </div>
     </div>
+    <script>
+        let enviar = document.getElementById("botaodeok")
+        let nome = document.getElementById("digitarnome")
+
+        enviar.addEventListener('click', function guardarnome() {
+            localStorage.setItem("nomedousuario", nome.value)
+            console.log(nome.value)
+        })
+    </script>
 </body>
 </html>

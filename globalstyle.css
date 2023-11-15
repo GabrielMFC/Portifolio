@@ -195,6 +195,9 @@ input{
     margin-top: 3%;
     margin-left: 5%
 }
+#botaodeok:hover{
+    cursor: pointer;
+}
 @keyframes typingcode{
     100%{
         
