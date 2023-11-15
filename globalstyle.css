@@ -361,5 +361,84 @@ input{
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
-    
+    #tela-de-login{
+        width: 60vw;
+        height: 50vh;
+    }
+    #sejabemvindo{
+        border-radius: 20px;
+        padding-right: 0px;
+        font-size: 70px;
+        position: relative;
+        left: 10vh;
+        width: 42vh;
+    }
+    input{
+        width: 42vh;
+        height: 50px;
+        font-size: 2em;
+        position: relative;
+        left: 10vh;
+    }
+    #botaodeok{
+        width: 50%;
+        font-size: 3em;
+        position: relative;
+        left: 10vh;
+        height: auto;
+    }
+    #celular{
+        overflow: hidden;
+        width: 40%;
+    }
+    .code{
+        font-size: 1.8em;
+    }
+    .codefalse{
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (min-width: 1201px
+) and (min-height: 700px) {
+    #tela-de-login{
+        width: 80vw;
+        height: 30vw;
+    }
+    #sejabemvindo{
+        border-radius: 20px;
+        margin-bottom: 1vh;
+        font-size: 7vh;
+        position: relative;
+        left: 5vh;
+        width: 110vh;
+        height: auto;
+        text-align: center;
+    }
+    input{
+        border-radius: 20px;
+        width: 110vh;
+        font-size: 5vh;
+        position: relative;
+        left: 6vh;
+        height: auto;
+    }
+    #botaodeok{
+        width: 50vh;
+        font-size: 5vh;
+        position: relative;
+        left: 64vh;
+        height: auto;
+        margin: 2vh;
+    }
+    #celular{
+        overflow: hidden;
+        width: 40vh;
+    }
+    .code{
+        font-size: 4vh;
+    }
+    .codefalse{
+        font-size: 4vh;
+    }
 }
