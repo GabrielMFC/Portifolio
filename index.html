@@ -59,10 +59,12 @@
     <script>
         let enviar = document.getElementById("botaodeok")
         let nome = document.getElementById("digitarnome")
+        enviar.style.transition = 'transform 0.5s ease'
 
         enviar.addEventListener('click', function guardarnome() {
             localStorage.setItem("nomedousuario", nome.value)
             console.log(nome.value)
+            enviar.style.transform = 'scale(1.2)'
         })
     </script>
 </body>

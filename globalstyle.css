@@ -253,11 +253,59 @@ input{
     margin-bottom: 2.5%;
 }
 }
+
 @media screen and (min-width: 735px) and (min-height: 1067px) {
 .codefalse{
     font-size: 2vh;
 }
 .code{
     font-size: 2vh;
+}
+}
+
+@media screen and (min-width: 990px) {
+#sejabemvindo{
+   font-size: 5vh;
+}
+#botaodeok{
+    font-size: 3vh;
+    height: 5vh;
+}
+#celular{
+    width: 30vw;
+}
+}
+@media screen and (min-height: 1000px) {
+    .code{
+        font-size: 2.5vh;
+    }
+    .codefalse{
+        font-size: 2.5vh;
+    }
+}
+@media screen and (min-width: 1200px) {
+    #botaodeok{
+        width: 12vw;
+    }
+}
+@media screen and (min-width: 1300px) {
+#tela-de-login{
+    height: 50vh;
+    width: 70vw;
+}
+#sejabemvindo{
+    width: 50vw;
+    font-size: 7vh;
+}
+input{
+    font-size: 5vh;
+    height: 5vh;
+    width: 30vw;
+}
+.code{
+    font-size: 3vh;
+}
+.codefalse{
+    font-size: 3vh;
 }
 }
