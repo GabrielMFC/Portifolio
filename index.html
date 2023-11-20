@@ -10,9 +10,6 @@
     <link rel="stylesheet" href="globalstyle.css">
 </head>
 <body>
-    <div>
-        <video src="ideodedigitarcodigo.mp4" autoplay loop muted >
-    </div>
     
         <div class="tela-de-loginflex">  
                 <div id="tela-de-login">
@@ -48,7 +45,7 @@
                         <div id="nome">
                             <h2 id="sejabemvindo"><span class="marcador">Seja</span> bem <span class="marcador">vindo(a)</span></h2>
                             <input id="digitarnome" type="text" placeholder="Digite seu nome...">
-                            <a href=#>
+                            <a href="portifolio.html">
                                 <button id="botaodeok">Enviar</button>
                             </a>
                         </div>
@@ -65,6 +62,7 @@
             localStorage.setItem("nomedousuario", nome.value)
             console.log(nome.value)
             enviar.style.transform = 'scale(1.2)'
+            enviar.style.background = '    background: #2FAD64'
         })
     </script>
 </body>
