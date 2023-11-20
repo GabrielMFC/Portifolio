@@ -8,7 +8,9 @@ body, html{
     width: 100%;
     overflow: hidden;
 }
-
+body{
+    background-color: rgba(0, 0, 0, 0.79);
+}
 video{
     margin: 0px;
     padding: 0px;
@@ -37,7 +39,7 @@ video{
 #tela-de-login{
     width: 50%;
     height: 50%;
-    background-color: rgba(128, 128, 128, 0.723);
+    background-color: rgba(128, 128, 128, 0.385);
     z-index: 2;
     border-radius: 0px 20px 0px 20px;
     display: flex;
@@ -75,7 +77,7 @@ h2{
     text-align: left;
 }
 #sejabemvindo{
-    background-color: gray;
+    background-color: rgba(128, 128, 128, 0.588);
     width: 100%;
     padding: 10px;
     font-family: sans-serif;
@@ -120,6 +122,7 @@ input{
     background-color: rgb(0, 0, 0);
     border-radius: 10px;
     overflow: hidden;
+    filter: blur(0.9px);
 }
 .codemain{
     color: greenyellow;
