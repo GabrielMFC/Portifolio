@@ -201,11 +201,13 @@ input{
     color: white;
     font-weight: bold;
 }
+
 #botaodeok:hover{
     cursor: pointer;
     transform: scale(1.2);
     background: #2FAD64;
 }
+
 @keyframes typingcode{
     100%{
     content: "Acess Guaranted";
