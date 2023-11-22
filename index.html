@@ -10,60 +10,18 @@
     <link rel="stylesheet" href="globalstyle.css">
 </head>
 <body>
-    
-        <div class="tela-de-loginflex">  
-                <div id="tela-de-login">
-                    <!-- Celular -->
-                    <div id="celular">
+    <div class="centralizarflexi">
 
-                        <div id="teladocelular">
-                            <div id="camera"></div>
-                            <h1 class="codemain"></h1>
-
-                            <p class="code1 code"></p>
-
-                            <p class="code2 codefalse"></p>
-
-                            <p class="code3 code"></p>
-
-                            <p class="code4 codefalse"></p>
-
-                            <p class="code5 code"></p>
-
-                            <p class="code6 codefalse"></p>
-
-                            <p class="code7 code"></p>
-
-                            <p class="code8 codefalse"></p>
-
-                            <p class="code9 code"></p>
-
-                        </div>
-                    </div>
-                    
-                    <div id="opcoesdelogin1">
-                        <div id="nome">
-                            <h2 id="sejabemvindo"><span class="marcador">Seja</span> bem <span class="marcador">vindo(a)</span></h2>
-                            <input id="digitarnome" type="text" placeholder="Digite seu nome...">
-                            <a href="portifolio.html">
-                                <button id="botaodeok">Enviar</button>
-                            </a>
-                        </div>
-                        
-                    </div>
+        <div id="corpo">
+            <div id="contornodatela">
+                <div id="tela"
+                ><h1 id="sejabemvindo">Seja bem vindo(a)</h1>
+                <div class="centralizarflexi">
+                    <button id="botaodeentrar">Entrar</button></div>
+            </div>
+            </div>
         </div>
-    </div>
-    <script>
-        let enviar = document.getElementById("botaodeok")
-        let nome = document.getElementById("digitarnome")
-        enviar.style.transition = 'transform 1s ease'
 
-        enviar.addEventListener('click', function guardarnome() {
-            localStorage.setItem("nomedousuario", nome.value)
-            console.log(nome.value)
-            enviar.style.transform = 'scale(1.2)'
-            enviar.style.background = '#2FAD64'
-        })
-    </script>
+    </div>
 </body>
 </html>
