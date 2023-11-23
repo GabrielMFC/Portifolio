@@ -29,6 +29,8 @@ html, body{
     border-radius: 1% 1% 5% 1%;
     display: flex;
     justify-content: center;
+    padding: 1%;
+    box-shadow: -10px 10px rgba(0, 0, 0, 0.03);
 }
 #contornodatela{
     width: 90%;
@@ -51,9 +53,11 @@ html, body{
     color: #333D1E;
     font-weight: bold;
     font-size: 3.7vw;
-    animation: sejabemvindocor 0.8s infinite;
+    animation: sejabemvindocor 0.0s infinite;
     text-decoration: underline;
     text-align: center;
+    font-family: 'Pixelify Sans', sans-serif;
+    margin-bottom: 10%;
 }
 
 @keyframes sejabemvindocor {
@@ -64,7 +68,133 @@ html, body{
         color: #A3AC90;
     }
 }
+#centralizarflexi2{
+    text-align: center
+}
+#centralizarflexi3{
+    text-align: center;
+    margin-top: 10%;
+}
 #botaodeentrar{
     width: 30vw;
     height: 7vh;
+    font-size: 5vh;
+    background-color: #A3AC90;
+    border-style: solid;
+    animation: botaoanimado 0s infinite;
+    font-family: 'Pixelify Sans', sans-serif;
 }
+#botaodesair{
+    width: 30vw;
+    height: 7vh;
+    font-size: 5vh;
+    background-color: #A3AC90;
+    border-style: solid;
+    animation: botaoanimado 0s infinite;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+#botaodeentrar:hover{
+    background-color: #a1e50e;
+    color: #85A053;
+    cursor: pointer;
+}
+/*
+.botao{
+    width: 0px;
+    height: 0px;
+    border-left: 3vh solid transparent;
+  border-right: 3vh solid transparent;
+  border-top: 5vh solid red;
+  rotate: 180deg;
+}*/
+@keyframes botaoanimado {
+    10%{
+        color: #A3AC90;
+        border-color: #A3AC90;
+    }
+    100%{
+        color: #292B2A;
+        border-color: #292B2A;
+    }
+}
+
+#teste{
+    width: 200px;
+    height: 200px;
+  position: absolute;
+  top: 55%;
+  right: 49%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10%;
+}
+#lado1{
+    height: 23vh;
+    width: 6vw;
+    background-color: var(--preto);
+    margin: 0px;
+    position: absolute;
+    border-radius: 10%;
+}
+#lado2{
+    height: 6vh;
+    width: 23vw;
+    background-color: var(--preto);
+    margin: 0px;
+    position: absolute;
+    border-radius: 10%;
+}
+#botaoA{
+    border-radius: 50%;
+    background-color: red;
+    width: 7vw;
+    height: 7vh;
+    position: absolute;
+    right: 30%;
+    top: 58%;
+}
+#botaoB{
+    border-radius: 50%;
+    background-color: red;
+    width: 7vw;
+    height: 7vh;
+    position: absolute;
+    right: 37%;
+    top: 70%;
+}
+/*
+.risco{
+    width: 2vw;
+    height: 10vh;
+    background-color: black;
+    position: absolute;
+    margin: 10px;
+    rotate: 330deg;
+    border-radius: 15%;
+    display: flex;
+    align-items: center;
+}
+.subrisco{
+    width: 20%;
+    height: 80%;
+    background-color: gray;
+    border-radius: 15%;
+}
+#risco1{
+    top: 79%;
+    right: 30%;
+}
+#risco2{
+    top: 79%;
+    left: 60%;
+}
+#risco3{
+    top: 79%;
+    left: 55%;
+}
+#risco4{
+    top: 79%;
+    left: 50%;
+}
+*/
