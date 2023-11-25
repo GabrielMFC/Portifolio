@@ -81,7 +81,6 @@ html, body{
     font-size: 5vh;
     background-color: #A3AC90;
     border-style: solid;
-    animation: botaoanimado 0s infinite;
     font-family: 'Pixelify Sans', sans-serif;
 }
 #botaodesair{
@@ -94,9 +93,12 @@ html, body{
     font-family: 'Pixelify Sans', sans-serif;
 }
 #botaodeentrar:hover{
-    background-color: #a1e50e;
-    color: #85A053;
     cursor: pointer;
+    animation: botaoanimado 0.2s infinite;
+}
+#botaodesair:hover{
+    cursor: pointer;
+    animation: botaoanimado 0.2s infinite;
 }
 /*
 .botao{
@@ -163,38 +165,79 @@ html, body{
     right: 37%;
     top: 70%;
 }
-/*
-.risco{
-    width: 2vw;
-    height: 10vh;
-    background-color: black;
+
+@media screen and (max-width: 1000px) {
+    #corpo{
+        width: 80%;
+        height: 90%;
+    }
+#sejabemvindo{
+    font-size: 4vh;
+    text-align: center;
+}
+#botaodeentrar{
+    font-size: 4vh;
+    width: 40vw;
+}
+#botaodesair{
+    font-size: 4vh;
+    width: 40vw;
+}
+#teste{
     position: absolute;
-    margin: 10px;
-    rotate: 330deg;
-    border-radius: 15%;
-    display: flex;
-    align-items: center;
+    right: 40;
 }
-.subrisco{
+#lado1{
     width: 20%;
-    height: 80%;
-    background-color: gray;
-    border-radius: 15%;
+    height: 65%;
 }
-#risco1{
-    top: 79%;
-    right: 30%;
+#lado2{
+    height: 20%;
+    width: 65%;
 }
-#risco2{
-    top: 79%;
-    left: 60%;
+#botaoA{
+    position: absolute;
+    left: 70vw;
+    width: 12vw;
+    height: 12vw;
 }
-#risco3{
-    top: 79%;
-    left: 55%;
+#botaoB{
+    position: absolute;
+    left: 60vw;
+    width: 12vw;
+    height: 12vw;
 }
-#risco4{
-    top: 79%;
-    left: 50%;
 }
-*/
+@media screen and (min-width: 500px) {
+    #corpo{
+        width: 70%;
+    }
+}
+@media screen and (min-width: 544px) and (min-height: 854px) {
+    #corpo{
+        height: 80%;
+    }
+    #lado1{
+        width: 25%;
+        height: 80%;
+    }
+    #lado2{
+        width: 80%;
+        height: 25%;
+    }
+}
+@media screen and (min-width: 560px) {
+    #corpo{
+        width: 70%;
+    }
+}
+@media screen and (min-width: 600px) {
+    #lado1{
+        width: 30%;
+        height: 85%;
+    }
+    #lado2{
+        width: 85%;
+        height: 30%;
+    }    
+}
