@@ -23,14 +23,14 @@ html, body{
     place-items: center;
 }
 #corpo{
-    background-color: var(--cinza);
+    background: linear-gradient(to top right, #C3BEBA, #C9C4BF, #D0C9C5, #D6CFCB, #DDD4D1);
     width: 50vw;
     height: 80vh;
     border-radius: 1% 1% 5% 1%;
     display: flex;
     justify-content: center;
     padding: 0%;
-    box-shadow: -10px 10px rgb(0, 0, 0);
+    box-shadow: -10px 10px rgba(0, 0, 0, 0.092);
 }
 #contornodatela{
     width: 90%;
@@ -113,7 +113,7 @@ html, body{
         border-color: #292B2A;
     }
 }
-
+/* Está com esse nome "teste", por que foi o nome que eu dei quando eu estava testando e eu esqueci de mudar*/
 #teste{
     width: 200px;
     height: 200px;
@@ -132,7 +132,7 @@ html, body{
     margin: 0px;
     position: absolute;
     border-radius: 10%;
-    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.981);
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.981);
 }
 #lado2{
     height: 6vh;
@@ -141,7 +141,14 @@ html, body{
     margin: 0px;
     position: absolute;
     border-radius: 10%;
-    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.981);
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.981);
+}
+#separadordesombra{
+    width: 9vw;
+    height: 9vw;
+    background-color: var(--preto);
+    position: absolute;
+    border: none;
 }
 #botaoAeB{
     width: 100px;
@@ -150,21 +157,35 @@ html, body{
 }
 #botaoA{
     border-radius: 50%;
-    background-color: blue;
+    background-color: var(--cinzaForte);
     width: 7vw;
     height: 7vh;
     position: absolute;
     right: 30%;
     top: 58%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.corpodobotao{
+    width: 70%;
+    height: 70%;
+    background-color: var(--vermelho);
+    border-radius: 50%;
+    box-shadow: 0px 0px 1vh rgba(0, 0, 0, 0.981);
+
 }
 #botaoB{
     border-radius: 50%;
-    background-color: red;
+    background-color: var(--cinzaForte);
     width: 7vw;
     height: 7vh;
     position: absolute;
     right: 37%;
     top: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 @media screen and (min-width: 300px) {
     #corpo{
@@ -259,19 +280,61 @@ html, body{
     #botaoA{
         width: 14vw;
         height: 14vw;
-        
+        position: absolute;
+        left: 30%;
     }
     #botaoB{
         width: 14vw;
         height: 14vw;
-        box-shadow: -10px 10px rgba(0, 0, 0, 0.184);
     }
     #contornodatela{
         width: 60%;
-        
-        
     }
 }
+@media screen and (max-width: 492px) and (min-height: 700px) {
+    #teste{
+        margin-top: 7vh;
+    }
+}
+@media screen and (min-width: 500px) {
+    #corpo{
+        height: 85vh;
+        width: 65vw;
+    }
+    #teste{
+        position: absolute;
+        right: 38%;
+    }
+    #lado1{
+        width: 8vw;
+        height: 30vw;
+    }
+    #lado2{
+        height: 8vw;
+        width: 30vw;
+    }
+    #botaoA{
+        left: 20%;
+        top: -30%;
+    }
+    #botaoB{
+        left: -20%;
+    }
+    #contornodatela{
+        width: 55%;
+    }
+}
+@media screen and (min-width: 600px) {
+    #teste{
+        margin-right: 10vw;
+    }
+}
+@media screen and (min-width: 700px) {
+    #botaoA{
+        top: -60%;
+    }
+}
+
 @media screen and (max-height: 485px) {
     #botaoA{
         width: 10vh;
@@ -285,5 +348,95 @@ html, body{
 @media screen and (min-height: 540px) {
     #teste{
         top: 52%;
+    }
+}
+@media screen and (max-width: 414px) and (min-height: 600px) {
+    #teste{
+        margin-top: 2vh;
+    }
+    #botaoAeB{
+        margin-top: 2vh;
+    }
+}
+@media screen and (max-width: 2160px) and (min-height: 1024px) {
+    #teste{
+        margin-top: 8vh;
+        right: 40%;
+    }
+    #botaoAeB{
+        margin-top: 5vh;
+    }
+}
+@media screen and (min-height: 1280px) {
+    #corpo{
+        height: 80%;
+    }
+}
+@media screen and (min-width: 1200px) and (min-height: 1920px) {
+    #corpo{
+        width: 75%;
+    }
+    #contornodatela{
+        width: 60%;
+    }
+    #teste{
+        right: 50%;
+        top: 55%;
+    }
+    #botaoA{
+        top: -130%;
+    }
+    #botaoB{
+        top: 100%;
+        left: -85%;
+    }
+}
+@media screen and (min-width: 2048px) and (min-height: 2732px) {
+    #corpo{
+        height: 90vh;
+    }
+    #botaoA{
+        position: absolute;
+        top: -290%;
+    }
+}
+@media screen and (min-height: 3500px) {
+    #corpo{
+        height: 80vh;
+    }
+}
+@media screen and (max-width: 1600px) and (min-height: 700px) {
+    #corpo{
+        width: 50vh;
+    }
+    #contornodatela{
+        width: 40vh;
+    }
+    #separadordesombra{
+        width: 5vh;
+    }
+    #teste{
+        top: 48%;
+    }
+    #lado1{
+        width: 5vh;
+        height: 20vh;
+    }
+    #lado2{
+        width: 20vh;
+        height: 5vh;
+    }
+    #botaoAeB{
+        position: absolute;
+        left: 48vw;
+        top: 58%;
+    }
+    #botaoA{
+        width: 10vh;
+        height: 10vh;
+    }
+    #botaoB{
+        width: 10vh;
+        height: 10vh;
     }
 }
