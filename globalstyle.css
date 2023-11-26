@@ -42,13 +42,13 @@ html, body{
     align-items: center;
     place-items: center;
     border-radius: 1% 1% 7% 1%;
-    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.981);
+    box-shadow: inset 0px 0px 1vh rgba(0, 0, 0, 0.981);
 }
 #tela{
     background-color: #A3AC90;
     width: 80%;
     height: 80%;
-    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.981);
+    box-shadow: inset 0px 0px 1vh rgba(0, 0, 0, 0.981);
 }
 #sejabemvindo{
     font-family: sans-serif;
@@ -141,6 +141,7 @@ html, body{
     margin: 0px;
     position: absolute;
     border-radius: 10%;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.981);
 }
 #botaoAeB{
     width: 100px;
@@ -149,7 +150,7 @@ html, body{
 }
 #botaoA{
     border-radius: 50%;
-    background-color: red;
+    background-color: blue;
     width: 7vw;
     height: 7vh;
     position: absolute;
