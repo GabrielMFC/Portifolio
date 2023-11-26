@@ -142,6 +142,7 @@ html, body{
 #botaoAeB{
     width: 200px;
     height: 200px;
+    position: absolute;
 }
 #botaoA{
     border-radius: 50%;
@@ -161,145 +162,69 @@ html, body{
     right: 37%;
     top: 70%;
 }
-@media screen and (max-width: 9999px) {
+@media screen and (min-width: 300px) {
     #corpo{
-        width: 50vw;
-        height: 90vh;
-        margin-right: 5%;
+        width: 90vw;
+        height: 80vh;
+        text-align: center;
     }
     #sejabemvindo{
         font-size: 4vh;
     }
-    #botaodeentrar{
-        width: 40vw;
-        font-size: 4vh;
-    }
-    #botaodesair{
-        width: 40vw;
-        font-size: 4vh;
+    #contornodatela{
+        position: absolute;
+        width: 75vw;
+        height: 40vh;
     }
     #teste{
         position: absolute;
         right: 35%;
-        top: 55%;
+        top: 49%;
     }
     #lado1{
-        width: 5vh;
-        height: 17vh;
+        width: 13%;
+        height: 55%;
     }
     #lado2{
-        width: 17vh;
-        height: 5vh;
+        width: 55%;
+        height: 13%;
     }
     #botaoAeB{
-        position: absolute;
-        top: 55%;
-        left: 30%;
+        top: 52%;
+        left: 36%;
     }
     #botaoA{
         position: absolute;
         top: 20%;
-        left: 50%;
-        width: 7vh;
-        height: 7vh;
+        right: 20%;
+        width: 30%;
+        height: 30%;
     }
     #botaoB{
         position: absolute;
         top: 60%;
-        left: 30%;
-        width: 7vh;
-        height: 7vh;
+        width: 30%;
+        height: 30%;
+    }
+    #botaodeentrar{
+        width: 20vh;
+    }
+    #botaodesair{
+        width: 20vh;
     }
 }
-@media screen and (min-width: 300px) {
-    #corpo{
-        width: 80vw;
-        height: 80vh;
-    }
-}
-@media screen and (min-width: 350px) {
-    #teste{
-        margin-right: 4vh;
-    }
-    #botaoAeB{
-        margin-left: 4vh;
-    }
-}
-@media screen and (min-width: 400px) {
-    #corpo{
-        width: 100%;
-        height: 90%;
-        margin: 5%;
-    }
-    #teste{
-        margin-right: 8vw;
-    }
-    #botaoAeB{
-        margin-left: 8vw;
-    }
-    #lado1{
-        height: 30vw;
-        width: 8vw;
-    }
-    #lado2{
-        width: 30vw;
-        height: 8vw;
-    }
-}
-@media screen and (min-width: 400px) and (min-height: 800px) and (max-height: 900px) {
-    #corpo{
-        width: 100%;
-        height: 90%;
-        margin: 5%;
-    }
-    #teste{
-        margin-right: 8vh;
-    }
-    #botaoAeB{
-        margin-left: 5vh;
-    }
-    #lado1{
-        height: 19vh;
-        width: 6vh;
-    }
-    #lado2{
-        width: 19vh;
-        height: 6vh;
-    }
+@media screen and (max-height: 485px) {
     #botaoA{
-        width: 8vh;
-        height: 8vh;
+        width: 10vh;
+        height: 10vh;
     }
     #botaoB{
-        width: 8vh;
-        height: 8vh;
+        width: 10vh;
+        height: 10vh;
     }
 }
-@media screen and (min-width: 455px) {
+@media screen and (min-height: 540px) {
     #teste{
-        margin-right: 8vw;
-    }
-    #botaoAeB{
-        margin-left: 8vw;
-    }
-    #botaoA{
-        width: 13vw;
-        height: 13vw;
-    }
-    #botaoB{
-        width: 13vw;
-        height: 13vw;
-        margin-top: 10%;
-    }
-}
-@media screen and (min-width: 600px) {
-    #corpo{
-        width: 65%;
-    }
-    #teste{
-        margin-right: 10vw;
-    }
-    #botaoAeB{
-        margin-left: 10vw;
+        top: 52%;
     }
 }
