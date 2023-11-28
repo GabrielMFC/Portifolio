@@ -25,7 +25,8 @@
                 ><h1 id="sejabemvindo">Seja bem vindo(a)</h1>
                 
                 <div id="centralizarflexi2">
-                    <button id="botaodeentrar">Entrar</button>
+                    <a id="link" href="#">
+                        <button id="botaodeentrar">Entrar</button></a>
                 </div>
                 
                 <div id="centralizarflexi3">
@@ -36,26 +37,103 @@
         </div>
 
         <div id="teste">
+            <div id="contorno"></div>
+            <div id="contorno2"></div>
+
             <div class="lado" id="lado1">
                 <div class="botao" id="botao1">
                     <div class="botao" id="botao4"></div></div>
                     
-                    <div id="apertar"></div>
-                </div>  
-            <div class="lado" id="lado2"><div class="botao" id="botao2"></div><div class="botao" id="botao3"></div></div>
-            <div id="separadordesombra"></div>
-        </div>
+                    <div class="botaodoanalogico" id="apertar"></div>
+                    <div class="botaodoanalogico"  id="apertar2"></div>
+                </div>
 
+            <div class="lado" id="lado2"><div class="botao" id="botao2"></div><div class="botao" id="botao3"></div>
+            <div class="botaodoanalogico" id="apertar3"></div>
+                <div class="botaodoanalogico" id="apertar4"></div>
+        </div>
+            
+            <div id="separadordesombra">
+            </div>
+            
+        </div>
+        
         <div id="botaoAeB">
-            <div id="botaoA"><div class="corpodobotao"></div>
+            <div id="botaoA" class="botoesAeB"><div class="corpodobotao" id="manipularsombra"></div>
             <div id="A">A</div>
         </div>
-            <div id="botaoB"><div class="corpodobotao">
+            <div id="botaoB" class="botoesAeB"><div class="corpodobotao" 
+                id="manipularsombra2">
             </div>
             <div id="B">B</div>
         </div>
         </div>
         </div>
     </div>
+    <script>
+        let botao1 = document.getElementById("apertar")
+        let botao2 = document.getElementById("apertar2")
+        let botao3 = document.getElementById("apertar3")
+        let botao4 = document.getElementById("apertar4")
+
+        botao1.addEventListener("click", function apertar() {
+            botao1.style.backgroundColor = "white"
+
+            setTimeout(function() {
+            botao1.style.backgroundColor = "#A0255E"
+        }, 500)
+        })
+        botao2.addEventListener("click", function apertar() {
+            botao2.style.backgroundColor = "white"
+            
+            setTimeout(function() {
+            botao2.style.backgroundColor = "#A0255E"
+        }, 500)
+        })
+        botao3.addEventListener("click", function apertar() {
+            botao3.style.backgroundColor = "white"
+            
+            setTimeout(function() {
+            botao3.style.backgroundColor = "#A0255E"
+        }, 500)
+        })
+        botao4.addEventListener("click", function apertar() {
+            botao4.style.backgroundColor = "white"
+            
+            setTimeout(function() {
+            botao4.style.backgroundColor = "#A0255E"
+        }, 500)
+        })
+
+        let entrar = document.getElementById("botaodeentrar")
+        let link = document.getElementById("link")
+        let evento = 0
+        entrar.addEventListener("click", function contador() {
+            evento++
+            if(evento == 2){
+                link.href = 'portifolio.html'
+            }
+        })
+        
+        let botao = document.getElementById("A")
+        let sombra = document.getElementById("manipularsombra")
+        botao.addEventListener("click", function clicarnobotao() {
+            sombra.style.boxShadow = "0px 0px 0px rgba(0, 0, 0, 0)"
+
+            setTimeout(function() {
+                sombra.style.boxShadow = "0px 0px 0.5vh rgba(0, 0, 0, 0.981)"
+            }, 500)
+        })
+
+        let botaob = document.getElementById("B")
+        let sombra2 = document.getElementById("manipularsombra2")
+        botaob.addEventListener("click", function clicarnobotao() {
+            sombra2.style.boxShadow = "0px 0px 0px rgba(0, 0, 0, 0)"
+
+            setTimeout(function() {
+                sombra2.style.boxShadow = "0px 0px 0.5vh rgba(0, 0, 0, 0.981)"
+            }, 500)
+        })
+    </script>
 </body>
 </html>
