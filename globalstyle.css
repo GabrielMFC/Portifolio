@@ -259,7 +259,7 @@ html, body{
 
 @media screen and (min-width: 300px) {
     #corpo{
-        width: 85vw;
+        width: 50vw;
         height: 80vh;
         text-align: center;
     }
@@ -509,31 +509,16 @@ html, body{
         width: 10vh;
         height: 10vh;
     }}
-    @media screen and (max-width: 700px) and (max-height: 1000px) {
+    @media screen and (min-width: 300px) and (max-width: 419px) {
         #corpo{
-            width: 90%;
-            height: 75%;
+            width: 85vw;
         }
-        #contornodatela{
-            width: 80%;
-            height: 30%;
+        #contorno{
+            width: 20%;
+            height: 70%;
         }
-        #botaodeentrar{
-            font-size: 3vh;
-            width: 15vh;
-            height: 4vh;
-        }
-        #botaodesair{
-            font-size: 3vh;
-            width: 15vh;
-            height: 4vh;
-        }
-        #lado1{
-            width: 5vh;
-            height: 19vh;
-        }
-        #lado2{
-            width: 19vh;
-            height: 5vh;
+        #contorno2{
+            width: 70%;
+            height: 20%;
         }
     }
