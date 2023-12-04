@@ -59,12 +59,12 @@
         
         <div id="botaoAeB">
             <div id="botaoA" class="botoesAeB"><div class="corpodobotao" id="manipularsombra"></div>
-            <div id="A">A</div>
+            <div id="A"><a id="linkdobotaoA" href="#">A</a></div>
         </div>
             <div id="botaoB" class="botoesAeB"><div class="corpodobotao" 
                 id="manipularsombra2">
             </div>
-            <div id="B">B</div>
+            <div id="B"><a id="linkdobotaoB" href="#">B</a></div>
         </div>
         </div>
         </div>
@@ -132,6 +132,39 @@
             setTimeout(function() {
                 sombra2.style.boxShadow = "0px 0px 0.5vh rgba(0, 0, 0, 0.981)"
             }, 500)
+        })
+        let sair = document.getElementById("botaodesair")
+        sair.addEventListener("click", function alertar() {
+            alert("Eu sei que você não quer fazer isso, lhe darei outra chance 🙃")
+        })
+        let botaodoanalogicodecima = document.getElementById("apertar")
+        let botaodoanalogicodebaixo = document.getElementById("apertar2")
+        let validar = 0
+        botaodoanalogicodecima.addEventListener("click", function mexernatela() {
+            entrar.classList.add('hovertrue')
+            sair.classList.remove('hovertrue')
+            validar = 1
+        })
+        botaodoanalogicodebaixo.addEventListener("click", function mexernatelaparabaixo() {
+            sair.classList.add('hovertrue')
+            entrar.classList.remove('hovertrue')
+            validar = 2
+        })
+        let linkA = document.getElementById("linkdobotaoA")
+        linkA.addEventListener("click", function selecionarA() {
+            if(validar == 1){
+                linkA.href = "portifolio.html"
+            }else{
+                alert("Eu sei que você não quer fazer isso, lhe darei outra chance 🙃")
+            }
+        })
+        let linkB = document.getElementById("linkdobotaoB")
+        linkB.addEventListener("click", function selecionarB() {
+            if(validar == 1){
+                linkB.href = "portifolio.html"
+            }else{
+                alert("Eu sei que você não quer fazer isso, lhe darei outra chance 🙃")
+            }
         })
     </script>
 </body>

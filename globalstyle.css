@@ -92,7 +92,6 @@ html, body{
     font-size: 5vh;
     background-color: #A3AC90;
     border-style: solid;
-    animation: botaoanimado 0s infinite;
     font-family: 'Pixelify Sans', sans-serif;
 }
 #botaodeentrar:hover{
@@ -319,4 +318,15 @@ html, body{
     #B{
         font-size: 4vh;
     }
+}
+.hovertrue{
+    animation: botaoanimado 0.2s infinite;
+}
+#linkdobotaoA{
+    color: white;
+    text-decoration: none;
+}
+#linkdobotaoB{
+    color: white;
+    text-decoration: none;
 }
