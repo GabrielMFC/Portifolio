@@ -127,7 +127,7 @@ verde claro+ #9bbc0f
         let bordaEnzo = document.getElementById("bordadopersonagem1")
         let linkmanu = document.getElementById("linkmanu")
         let delay = 0
-
+        let delay2 = 0
         bordaManu.addEventListener("click", function escolhermanu() {
             delay++
             localStorage.setItem("value", "1")
@@ -136,9 +136,9 @@ verde claro+ #9bbc0f
             }
         })
         bordaEnzo.addEventListener("click", function escolherenzo() {
-            delay++
+            delay2++
             localStorage.setItem("value", "2")
-            if(delay == 2){
+            if(delay2 == 2){
                 linkenzo.href = "portifolio.html"
             }
         })
