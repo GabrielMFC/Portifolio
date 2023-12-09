@@ -40,6 +40,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-top: 5vh;
     }
     #bordadopersonagem2{
         height: 30vh;
@@ -110,11 +111,37 @@ verde claro+ #9bbc0f
     <div id="titulo"><h1>Selecione seu personagem</h1></div>
     <div id="centralizarflexi">
         <div class="borda" id="bordadopersonagem1">
-            <img id="Enzo" src="Enzo.png" alt="">
-            <h2 id="h2enzo">Enzo</h2>
+            <a id="linkenzo" href="#">
+                <img id="Enzo" src="Enzo.png" alt="">
+                <h2 id="h2enzo">Enzo</h2>
+            </a>
         </div>
-        <div class="borda" id="bordadopersonagem2"><img id="Manu" src="Manu.png" alt="">
-        <h2>Manu</h2></div>
+        
+            <div class="borda" id="bordadopersonagem2"><a id="linkmanu" href="#">
+                <img id="Manu" src="Manu.png" alt="">
+                <h2>Manu</h2>
+            </a></div>
     </div>
+    <script>
+        let bordaManu = document.getElementById("bordadopersonagem2")
+        let bordaEnzo = document.getElementById("bordadopersonagem1")
+        let linkmanu = document.getElementById("linkmanu")
+        let delay = 0
+
+        bordaManu.addEventListener("click", function escolhermanu() {
+            delay++
+            localStorage.setItem("value", "1")
+            if(delay == 2){
+                linkmanu.href = "portifolio.html"
+            }
+        })
+        bordaEnzo.addEventListener("click", function escolherenzo() {
+            delay++
+            localStorage.setItem("value", "2")
+            if(delay == 2){
+                linkenzo.href = "portifolio.html"
+            }
+        })
+    </script>
 </body>
 </html>
