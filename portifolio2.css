@@ -67,6 +67,19 @@ img {
   p{
     color: black;
     font-family: 'Pixelify Sans', sans-serif;
+    font-size: 2.5vh;
+  }
+
+  .topicos{
+    color: lightskyblue;
+    display: block;
+    margin: 5%;
+    font-size: 3vh;
+    text-decoration: underline;
+    width: 100%;
+  }
+  .topicos:hover{
+    cursor: pointer;
   }
   #centroflex{
     width: 100%;
