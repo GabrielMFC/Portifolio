@@ -13,9 +13,10 @@ html, body{
     padding: 0px;
     overflow: hidden;
 }
-img {
+#fundo{
     width: 100%;
     height: 100%;
+    z-index: -5;
   }
   #centralizarflexi{
     width: 100%;
@@ -58,7 +59,7 @@ img {
     align-items: center;
     text-align: center;
   }
-  #chat{
+  .chat{
     width: 40vh;
     height: 40vh;
     position: absolute;
@@ -69,7 +70,6 @@ img {
     font-family: 'Pixelify Sans', sans-serif;
     font-size: 2.5vh;
   }
-
   .topicos{
     color: lightskyblue;
     display: block;
@@ -96,4 +96,27 @@ img {
     justify-content: center;
     text-align: center;
   }
-  
+  #centralizarflexip{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 65%;
+    left: 30%;
+    width: 25vh;
+    height: 25vh;
+  }
+  #afirmacao{
+    position: absolute;
+    font-size: 4vh;
+  }
+  #chatdousuario{
+    position: absolute;
+    top: 0%;
+    width: 25vh;
+    height: 25vh;
+    left: 0%;
+  }
+  .FazerAqlIconeIDeImagemIndisponivelDesaparecer{
+    z-index: -1;
+  }
