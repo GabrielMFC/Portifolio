@@ -1,6 +1,10 @@
 let valor = localStorage.getItem("value")
 let usuario = document.getElementById("usuario")
-let cancelarchat = 0
+let cancelarchat = undefined
+let pararchat = 0
+addEventListener("unload", function adiquirirvalorparacancelar() {
+    localStorage.getItem(cancelarchat)
+})
 if(valor == "1"){
     usuario.src = "Manudecostas.png"
 }
@@ -23,8 +27,12 @@ var identificador = 0 /* Apresentação */
  var identificador5 = 0 /* Projetos */
 
  var identificador6 = 0 /* Descrição do Sobre mim */
+ let identificador7 = 0
 
 function Digitarsejabemvindo() {
+    if(pararchat == 1){
+        return
+    }
     if (identificador < msg.length) {
         document.getElementById("apresentacao").innerHTML += msg.charAt(identificador)
         identificador++
@@ -39,43 +47,61 @@ function Digitarsejabemvindo() {
         identificador2++
         setTimeout(topico, 130)
      }, 9820)
-
-     setTimeout(function todosTopicos() {
+    
+      function todosOstopicos() {
         document.getElementById("topico").innerHTML = ""
-        document.getElementById("sobremim").innerHTML += msgsobremim.charAt(identificador3)
-        setTimeout( function(){
-        document.getElementById("habilidades").innerHTML += msghabilidade.charAt(identificador4)
-        identificador4++
-    }, 1190)
-        setTimeout(function(){
-        document.getElementById("portifolio").innerHTML += msgportifolio.charAt(identificador5) 
-        identificador5++}, 2640)
-        identificador3++
-        setTimeout(todosTopicos, 130)
-     }, 15500)
-     
-     
+            if(identificador3 < msgsobremim.length){
+                document.getElementById("sobremim").innerHTML += msgsobremim.charAt(identificador3)
+                identificador3++ 
+            }
+            if(identificador3 >= msgsobremim.length) {
+            if(identificador4 < msghabilidade.length){
+                document.getElementById("habilidades").innerHTML += msghabilidade.charAt(identificador4)
+                identificador4++
+            }}
+            if(identificador4 >= msghabilidade.length){
+            if(identificador5 < msgportifolio.length){
+                document.getElementById("portifolio").innerHTML += msgportifolio.charAt(identificador5)
+                identificador5++
+            }}
+            setTimeout(todosOstopicos, 130)
+      }
+setTimeout(todosOstopicos, 15500)
      document.getElementById("sobremim").addEventListener("click", function descSobremim() {
+        pararchat = 1
         document.getElementById("sobremim").innerHTML = ""
         document.getElementById("habilidades").innerHTML = ""
         document.getElementById("portifolio").innerHTML = ""
         document.getElementById("descricaosobremim").innerHTML += sobremimdesc.charAt(identificador6)
         identificador6++
-
         setTimeout(descSobremim, 130)
      })
 
      document.getElementById("sobremim").addEventListener("click", function fazerfaladousuarioaparecer() {
+        localStorage.setItem(cancelarchat, 1)
         document.getElementById("centralizarflexip").classList.remove("FazerAqlIconeIDeImagemIndisponivelDesaparecer")
         document.getElementById("chatdousuario").src = "chatdousuario.png"
         document.getElementById("afirmacao").innerHTML = "SOBRE MIM!"
         setTimeout(() => {
             document.getElementById("centralizarflexip").classList.add("FazerAqlIconeIDeImagemIndisponivelDesaparecer")
             document.getElementById("chatdousuario").src = "#"
-        }, 3000)
-     })
-     document.getElementById("habilidades").addEventListener("click", function abrirHabilidades() {
-        
+        }, 2000)
+
+        setTimeout(() => {
+            document.getElementById("centralizarflexip").classList.remove("FazerAqlIconeIDeImagemIndisponivelDesaparecer")
+            document.getElementById("chatdousuario").src = "chatdousuario.png"
+            document.getElementById("afirmacao").innerHTML = "Voltar"
+            document.getElementById("afirmacao").style.color = "lightblue"
+            document.getElementById("afirmacao").style.textDecoration = "underline"
+            document.getElementById("afirmacao").style.cursor = "pointer"
+        }, 9000)
+        document.getElementById("afirmacao").addEventListener("click", function VoltarproTopicoDeEscolha(){
+             identificador3 = 0 
+             identificador4 = 0 
+             identificador5 = 0 
+            document.getElementById("descricaosobremim").innerHTML  = ""
+            todosOstopicos()
+        })
      })
 let imagem = document.getElementById("chat")
 Digitarsejabemvindo()

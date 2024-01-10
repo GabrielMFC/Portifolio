@@ -101,21 +101,22 @@ html, body{
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 65%;
-    left: 30%;
-    width: 25vh;
+    top: 65vh;
+    right: 0vh;
+    width: 100%;
     height: 25vh;
   }
   #afirmacao{
     position: absolute;
     font-size: 4vh;
+    display: block;
+    top: 40%;
   }
   #chatdousuario{
     position: absolute;
-    top: 0%;
     width: 25vh;
     height: 25vh;
-    left: 0%;
+    top: 0%;
   }
   .FazerAqlIconeIDeImagemIndisponivelDesaparecer{
     z-index: -1;

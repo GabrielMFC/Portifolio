@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habilidades</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <style>
+        *{
+        margin: 0%;
+        padding: 0%;
+        }
+        :root{
+        --cinza: #C3BEBA;
+        --cinzaForte: #8E878E;
+        --verde: #85A053;
+        --verdeclarin: #A3AC90;
+        --preto: #292B2A;
+        --vermelho: #A0255E;
+        --roxo: #736D99;
+        --azul: #1E278C;
+        }
+        body, html{
+            width: 100%;
+            height: 100%;
+        }
+        body{
+            background-color: var(--verde);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #posicionarh1{
+            position: absolute;
+            top: 2%;
+        }
+        #posicionarh1 > h1{
+            font-family: 'Pixelify Sans', sans-serif;
+            color: white;
+        }
+        img{
+            width: 10vh;
+            height: 10vh;
+            display: inline-block;
+        }
+        .CaixaDeHabilidade{
+            display: inline-block;
+            margin: 5%;
+            border: 5px solid white;
+            position: absolute;
+        }
+        #item1{
+            top: 15%;
+            left: 0%;
+        }
+        #item2{
+            top: 15%;
+            left: 15vh;
+        }
+        #item3{
+            top: 15%;
+            left: 30vh;
+        }
+        .PdeHabilidade{
+            text-align: center;
+            font-size: 3vh;
+            font-family: 'Pixelify Sans', sans-serif;
+            font-weight: bold;
+        }
+        #item4{
+            top: 15%;
+            left: 45vh;
+        }
+        .itemmisterio{
+            width: 10vh;
+            height: 14.2vh;
+        }
+        .misterio{
+            position: absolute;
+            font-size: 13vh;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="posicionarh1">
+        <h1>Catálogo de Habilidades:</h1>
+    </div>
+    <div id="linha"></div>
+    <div class="CaixaDeHabilidade" id="item1"><img src="htmlpng.png" alt="">
+    <p class="PdeHabilidade">HTML</p>
+</div>
+
+    <div class="CaixaDeHabilidade" id="item2"><img src="css.png" alt="">
+    <p class="PdeHabilidade">CSS</p>
+</div>
+
+    <div class="CaixaDeHabilidade" id="item3"><img src="js.png" alt="">
+    <p class="PdeHabilidade">JS</p>
+</div>
+
+<div class="CaixaDeHabilidade itemmisterio" id="item4">
+    <h1 class="PdeHabilidade misterio">?</h1>
+</div>
+</body>
+</ht

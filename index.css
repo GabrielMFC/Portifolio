@@ -117,13 +117,13 @@ html, body{
 #teste{
     width: 23vh;
     height: 23vh;
-  position: absolute;
-  top: 60%;
-  right: 55%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0%;
+    position: absolute;
+    top: 60%;
+    right: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0%;
 }
 #lado1{
     height: 23vh;
