@@ -2,9 +2,7 @@ let valor = localStorage.getItem("value")
 let usuario = document.getElementById("usuario")
 let cancelarchat = undefined
 let pararchat = 0
-addEventListener("unload", function adiquirirvalorparacancelar() {
-    localStorage.getItem(cancelarchat)
-})
+let impedirQueasOpcoesPare = 0
 if(valor == "1"){
     usuario.src = "Manudecostas.png"
 }
@@ -28,6 +26,10 @@ var identificador = 0 /* Apresentação */
 
  var identificador6 = 0 /* Descrição do Sobre mim */
  let identificador7 = 0
+ var identificador8 = 0
+ var identificador9 = 0
+ var identificador10 = 0
+
 
 function Digitarsejabemvindo() {
     if(pararchat == 1){
@@ -43,13 +45,19 @@ function Digitarsejabemvindo() {
         }
     } 
     setTimeout( function topico(){
+        if(pararchat == 1){
+            return
+        }
         document.getElementById("topico").innerHTML += msgtopico.charAt(identificador2)
         identificador2++
         setTimeout(topico, 130)
      }, 9820)
-    
+     Digitarsejabemvindo()
       function todosOstopicos() {
         document.getElementById("topico").innerHTML = ""
+        if(pararchat == 1){
+            return
+        }
             if(identificador3 < msgsobremim.length){
                 document.getElementById("sobremim").innerHTML += msgsobremim.charAt(identificador3)
                 identificador3++ 
@@ -69,6 +77,9 @@ function Digitarsejabemvindo() {
 setTimeout(todosOstopicos, 15500)
      document.getElementById("sobremim").addEventListener("click", function descSobremim() {
         pararchat = 1
+        if(impedirQueasOpcoesPare == 1){
+            return
+        }
         document.getElementById("sobremim").innerHTML = ""
         document.getElementById("habilidades").innerHTML = ""
         document.getElementById("portifolio").innerHTML = ""
@@ -78,7 +89,6 @@ setTimeout(todosOstopicos, 15500)
      })
 
      document.getElementById("sobremim").addEventListener("click", function fazerfaladousuarioaparecer() {
-        localStorage.setItem(cancelarchat, 1)
         document.getElementById("centralizarflexip").classList.remove("FazerAqlIconeIDeImagemIndisponivelDesaparecer")
         document.getElementById("chatdousuario").src = "chatdousuario.png"
         document.getElementById("afirmacao").innerHTML = "SOBRE MIM!"
@@ -95,13 +105,30 @@ setTimeout(todosOstopicos, 15500)
             document.getElementById("afirmacao").style.textDecoration = "underline"
             document.getElementById("afirmacao").style.cursor = "pointer"
         }, 9000)
-        document.getElementById("afirmacao").addEventListener("click", function VoltarproTopicoDeEscolha(){
-             identificador3 = 0 
-             identificador4 = 0 
-             identificador5 = 0 
-            document.getElementById("descricaosobremim").innerHTML  = ""
-            todosOstopicos()
-        })
+        document.getElementById("afirmacao").addEventListener("click", function FazerDesDesaparecer(){
+            document.getElementById("descricaosobremim").innerHTML = ""
+         })
      })
+     
+     document.getElementById("afirmacao").addEventListener("click", function fazeropcaoaparecer(){
+        setTimeout(() => {document.getElementById("centralizarflexip").classList.add("FazerAqlIconeIDeImagemIndisponivelDesaparecer")
+        document.getElementById("chatdousuario").src = "#"}, 1000)
+        impedirQueasOpcoesPare = 1
+        if(identificador8 < msgsobremim.length){
+            document.getElementById("sobremim").innerHTML += msgsobremim.charAt(identificador8)
+            identificador8++ 
+        }
+        if(identificador8 >= msgsobremim.length){
+        if(identificador9 < msghabilidade.length){
+            document.getElementById("habilidades").innerHTML += msghabilidade.charAt(identificador9)
+            identificador9++
+        }}
+        if(identificador9 >= msghabilidade.length){
+        if(identificador10 < msgportifolio.length){
+            document.getElementById("portifolio").innerHTML += msgportifolio.charAt(identificador10)
+            identificador10++
+        }}
+            setTimeout(fazeropcaoaparecer, 130)
+    })
+
 let imagem = document.getElementById("chat")
-Digitarsejabemvindo()
