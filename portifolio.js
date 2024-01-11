@@ -30,9 +30,8 @@ var identificador = 0 /* Apresentação */
  var identificador9 = 0
  var identificador10 = 0
 
-
 function Digitarsejabemvindo() {
-    if(pararchat == 1){
+    if(localStorage.getItem("valor2") == 1){
         return
     }
     if (identificador < msg.length) {
@@ -45,7 +44,7 @@ function Digitarsejabemvindo() {
         }
     } 
     setTimeout( function topico(){
-        if(pararchat == 1){
+        if(localStorage.getItem("valor2") == 1){
             return
         }
         document.getElementById("topico").innerHTML += msgtopico.charAt(identificador2)
@@ -55,9 +54,6 @@ function Digitarsejabemvindo() {
      Digitarsejabemvindo()
       function todosOstopicos() {
         document.getElementById("topico").innerHTML = ""
-        if(pararchat == 1){
-            return
-        }
             if(identificador3 < msgsobremim.length){
                 document.getElementById("sobremim").innerHTML += msgsobremim.charAt(identificador3)
                 identificador3++ 
@@ -74,61 +70,43 @@ function Digitarsejabemvindo() {
             }}
             setTimeout(todosOstopicos, 130)
       }
-setTimeout(todosOstopicos, 15500)
+    if(localStorage.getItem("valor2") == 1){
+        setTimeout(todosOstopicos, 100)
+      }else{
+        setTimeout(todosOstopicos, 15500)
+      }
+
      document.getElementById("sobremim").addEventListener("click", function descSobremim() {
-        pararchat = 1
-        if(impedirQueasOpcoesPare == 1){
-            return
-        }
         document.getElementById("sobremim").innerHTML = ""
         document.getElementById("habilidades").innerHTML = ""
         document.getElementById("portifolio").innerHTML = ""
+        if(identificador6 < sobremimdesc.length){
         document.getElementById("descricaosobremim").innerHTML += sobremimdesc.charAt(identificador6)
         identificador6++
+        }
         setTimeout(descSobremim, 130)
      })
 
-     document.getElementById("sobremim").addEventListener("click", function fazerfaladousuarioaparecer() {
+     document.getElementById("sobremim").addEventListener("click", function fazerchatdousuarioaparecer() {
+            valordeResetDaPagina = localStorage.getItem("valor2")
+         console.log(valordeResetDaPagina)
         document.getElementById("centralizarflexip").classList.remove("FazerAqlIconeIDeImagemIndisponivelDesaparecer")
         document.getElementById("chatdousuario").src = "chatdousuario.png"
         document.getElementById("afirmacao").innerHTML = "SOBRE MIM!"
         setTimeout(() => {
             document.getElementById("centralizarflexip").classList.add("FazerAqlIconeIDeImagemIndisponivelDesaparecer")
-            document.getElementById("chatdousuario").src = "#"
-        }, 2000)
-
+        document.getElementById("chatdousuario").src = "#"
+        document.getElementById("afirmacao").innerHTML = ""
+        }, 2000) 
         setTimeout(() => {
+            document.getElementById("afirmacao").style.textDecoration = "underline"
+            document.getElementById("afirmacao").style.color = "lightblue"
             document.getElementById("centralizarflexip").classList.remove("FazerAqlIconeIDeImagemIndisponivelDesaparecer")
             document.getElementById("chatdousuario").src = "chatdousuario.png"
-            document.getElementById("afirmacao").innerHTML = "Voltar"
-            document.getElementById("afirmacao").style.color = "lightblue"
-            document.getElementById("afirmacao").style.textDecoration = "underline"
-            document.getElementById("afirmacao").style.cursor = "pointer"
-        }, 9000)
-        document.getElementById("afirmacao").addEventListener("click", function FazerDesDesaparecer(){
-            document.getElementById("descricaosobremim").innerHTML = ""
-         })
+        document.getElementById("afirmacao").innerHTML = "Voltar"
+        }, 7000)
      })
-     
-     document.getElementById("afirmacao").addEventListener("click", function fazeropcaoaparecer(){
-        setTimeout(() => {document.getElementById("centralizarflexip").classList.add("FazerAqlIconeIDeImagemIndisponivelDesaparecer")
-        document.getElementById("chatdousuario").src = "#"}, 1000)
-        impedirQueasOpcoesPare = 1
-        if(identificador8 < msgsobremim.length){
-            document.getElementById("sobremim").innerHTML += msgsobremim.charAt(identificador8)
-            identificador8++ 
-        }
-        if(identificador8 >= msgsobremim.length){
-        if(identificador9 < msghabilidade.length){
-            document.getElementById("habilidades").innerHTML += msghabilidade.charAt(identificador9)
-            identificador9++
-        }}
-        if(identificador9 >= msghabilidade.length){
-        if(identificador10 < msgportifolio.length){
-            document.getElementById("portifolio").innerHTML += msgportifolio.charAt(identificador10)
-            identificador10++
-        }}
-            setTimeout(fazeropcaoaparecer, 130)
-    })
-
+     document.getElementById("afirmacao").addEventListener("click", function atribuiroValorProLocalstorage(){
+        localStorage.setItem("valor2", 1)
+     })
 let imagem = document.getElementById("chat")
