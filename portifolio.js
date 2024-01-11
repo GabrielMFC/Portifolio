@@ -1,6 +1,6 @@
 let valor = localStorage.getItem("value")
 let usuario = document.getElementById("usuario")
-let cancelarchat = undefined
+let imagem = document.getElementById("chat")
 let pararchat = 0
 let impedirQueasOpcoesPare = 0
 if(valor == "1"){
@@ -109,4 +109,6 @@ function Digitarsejabemvindo() {
      document.getElementById("afirmacao").addEventListener("click", function atribuiroValorProLocalstorage(){
         localStorage.setItem("valor2", 1)
      })
-let imagem = document.getElementById("chat")
+     document.getElementById("habilidades").addEventListener("click", function adicionarvalorProLocalStorageDeHabilidade() {
+        localStorage.setItem("valorhabilidade", 1)
+     })
