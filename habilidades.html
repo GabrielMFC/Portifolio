@@ -27,10 +27,24 @@
             height: 100%;
         }
         body{
-            background-color: var(--verde);
+            background-color: var(--cinzaForte);
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+        p{
+            color: white;
+            font-family: 'Pixelify Sans', sans-serif;
+        }
+        #borda{
+            position: absolute;
+            width: 90%;
+            height: 80%;
+            display: flex;
+            justify-content: center;
+            background-color: var(--verde);
+            border-radius: 10%;
+            box-shadow: inset 0px 0px 1vh rgba(0, 0, 0, 0.981);
         }
         #posicionarh1{
             position: absolute;
@@ -50,6 +64,7 @@
             margin: 5%;
             border: 5px solid white;
             position: absolute;
+            background-color: var(--vermelho);
         }
         #item1{
             top: 15%;
@@ -68,6 +83,7 @@
             font-size: 3vh;
             font-family: 'Pixelify Sans', sans-serif;
             font-weight: bold;
+            color: white;
         }
         #item4{
             top: 15%;
@@ -84,27 +100,73 @@
             width: 100%;
             height: 100%;
         }
+        #voltar{
+            font-size: 4vh;
+            font-family: 'Pixelify Sans', sans-serif;
+            width: 15vh;
+            height: 5vh;
+            background-color: var(--vermelho);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 4px solid white;
+        }
+        #voltar > a{
+            color: white;
+        }
+        #centralizarbotaodevoltarFlexi{
+            position: absolute;
+            bottom: 5%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .topicoATIVAR{
+            position: absolute;
+            top: 5%;
+            width: 90%;
+            height: 90%;
+            max-width: 80vh;
+            max-height: 72vh;
+            background-color: var(--verdeclarin);
+            border: 4px solid white;
+            z-index: 2;
+        }
+        .topicoATIVAR > img{
+            position: absolute;
+            top: 10%;
+            width: 45%;
+            height: 45%;
+            margin-left: 5%;
+        }
     </style>
 </head>
 <body>
     <div id="posicionarh1">
         <h1>Catálogo de Habilidades:</h1>
+        <p>(clique nos ícones das habilidades para ver mais detalhes)</p>
     </div>
-    <div id="linha"></div>
-    <div class="CaixaDeHabilidade" id="item1"><img src="htmlpng.png" alt="">
-    <p class="PdeHabilidade">HTML</p>
+    <div id="borda">
+        <div class="topicoATIVAR" id="informacaoDeHabilidade"><img src="htmlpng.png" alt=""></div>
+        <div class="CaixaDeHabilidade" id="item1"><img src="htmlpng.png" alt="">
+        <p class="PdeHabilidade">HTML</p>
+        </div>
+        <div class="CaixaDeHabilidade" id="item2"><img src="css.png" alt="">
+        <p class="PdeHabilidade">CSS</p>
+        </div>
+        <div class="CaixaDeHabilidade" id="item3"><img src="js.png" alt="">
+        <p class="PdeHabilidade">JS</p>
+        </div>
+        
+        <div class="CaixaDeHabilidade itemmisterio" id="item4">
+        <h1 class="PdeHabilidade misterio">?</h1>
+        </div>
+        <div id="centralizarbotaodevoltarFlexi">
+            <div id="voltar"><a href="portifolio.html">Voltar</a></div>
+    </div>
 </div>
-
-    <div class="CaixaDeHabilidade" id="item2"><img src="css.png" alt="">
-    <p class="PdeHabilidade">CSS</p>
-</div>
-
-    <div class="CaixaDeHabilidade" id="item3"><img src="js.png" alt="">
-    <p class="PdeHabilidade">JS</p>
-</div>
-
-<div class="CaixaDeHabilidade itemmisterio" id="item4">
-    <h1 class="PdeHabilidade misterio">?</h1>
-</div>
+<script>
+    let paginaDeInformacao = document.getElementById("informacaoDeHabilidade")
+</script>
 </body>
-</ht
+</html>

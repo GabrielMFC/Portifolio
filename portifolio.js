@@ -47,6 +47,12 @@ function Digitarsejabemvindo() {
         if(localStorage.getItem("valor2") == 1){
             return
         }
+        if(localStorage.getItem("valorhabilidade") == 1){
+            return
+        }
+        if(localStorage.getItem("valorportifolio") == 1){
+            return
+        }
         document.getElementById("topico").innerHTML += msgtopico.charAt(identificador2)
         identificador2++
         setTimeout(topico, 130)
@@ -111,4 +117,7 @@ function Digitarsejabemvindo() {
      })
      document.getElementById("habilidades").addEventListener("click", function adicionarvalorProLocalStorageDeHabilidade() {
         localStorage.setItem("valorhabilidade", 1)
+     })
+     document.getElementById("portifolio").addEventListener("click", function adicionarvalorProLocalStorageDeportifolio() {
+        localStorage.setItem("valorportifolio", 1)
      })
