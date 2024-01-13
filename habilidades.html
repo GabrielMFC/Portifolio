@@ -26,6 +26,10 @@
             width: 100%;
             height: 100%;
         }
+        a{
+            color: white;
+            text-decoration: none;
+        }
         body{
             background-color: var(--cinzaForte);
             display: flex;
@@ -40,6 +44,7 @@
             position: absolute;
             width: 90%;
             height: 80%;
+            bottom: 6%;
             display: flex;
             justify-content: center;
             background-color: var(--verde);
@@ -131,13 +136,171 @@
             background-color: var(--verdeclarin);
             border: 4px solid white;
             z-index: 2;
-        }
-        .topicoATIVAR > img{
+        }/*
+        .topicoDESATIVAR{
+            z-index: -15;
+        }*/
+        #centralizarimgflexi{
             position: absolute;
-            top: 10%;
-            width: 45%;
-            height: 45%;
-            margin-left: 5%;
+            border: 5px solid white;
+            width: 40vh;
+            height: 40vh;
+            margin-left: 2%;
+            margin-top: 2%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 0px 0.5vh rgba(0, 0, 0, 0.981);
+            background-color: var(--vermelho);
+        }
+        #centralizarimgflexi > img{
+            position: absolute;
+            width: 80%;
+            height: 80%;
+        }
+        #caixadadescricao{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            right: 1%;
+            width: 30vh;
+            height: 45vh;
+            border: 4px solid black;
+            background-color: white;
+            box-shadow: 0px 0px 0.3vh rgba(0, 0, 0, 0.981);
+            margin-top: 1%;
+        }
+        #titulodadescricao{
+            position: absolute;
+            color: black;
+            font-family: 'Pixelify Sans', sans-serif;
+        }
+        #linhaparaseparar{
+            position: absolute;
+            top: 12%;
+            width: 100%;
+            height: 1vh;
+            background-color: black;
+        }
+        #centralizarpFlexi{
+            width: 100%;
+            height: 85%;
+            position: absolute;
+            bottom: 0%;
+            display: flex;
+        }
+        #descricaoDahabilidade{
+            color: black;
+            margin: 1%;
+            font-weight: bold;
+        }
+        #exemplotitle{
+            position: absolute;
+            bottom: 26%;
+            margin-left: 10%;
+            font-family: 'Pixelify Sans', sans-serif;
+        }
+        #exemplo{
+            position: absolute;
+            bottom: 10%;
+            margin-left: 10%;
+            width: 40vh;
+            height: 10vh;
+            background-color: black;
+            border-radius: 10%;
+            border: 4px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0px 0px 0.5vh rgba(0, 0, 0, 0.981);
+        }
+        #exemploP{
+            color: var(--verdeclarin);
+            font-weight: bold;
+        }
+        #fecharDesc{
+            position: absolute;
+            bottom: 1%;
+            font-family: 'Pixelify Sans', sans-serif;
+            font-family: 3vh;
+            width: 100%;
+            height: 3vh;
+            display: flex;
+            justify-content: center;
+        }
+        #link{
+            position: absolute;
+            bottom: 3%;
+            background-color: white;
+            color: red;
+            cursor: pointer;
+            font-size: 2.5vh;
+            padding: 1vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+        #link:hover{
+            color: white;
+            background-color: red;
+        }
+        
+        @media screen and (max-width: 600px) {
+            h1{
+                font-size: 4vh;
+            }
+            #borda{
+                bottom: 2%;
+                width: 95%;
+            }
+        .CaixaDeHabilidade{
+            width: 10vh;
+            height: 10vh;
+            display: inline-block;
+            margin: 5%;
+            border: 5px solid white;
+            position: absolute;
+            background-color: var(--vermelho);
+        }
+        .itemmisterio{
+            width: 0vh;
+            height: 0vh;
+        }
+        .misterio{
+            font-size: 0vh;
+            width: 100%;
+            height: 100%;
+        }
+        .topicoATIVAR{
+            top: 5%;
+            width: 95%;
+            height: 100%;
+            max-width: 900vh;
+            max-height: 72vh;
+            overflow: hidden;
+        }
+        #centralizarimgflexi{
+            width: 16vh;
+            height: 16vh;
+            margin-left: 2%;
+            margin-top: 2%;
+        }
+        #caixadadescricao{
+            right: 1%;
+            width: 28vh;
+            height: 50vh;
+            margin-top: 1%;
+            overflow: scroll;
+        }
+        #exemplotitle{
+            margin-left: 2%;
+        }
+        #exemplo{
+            bottom: 10%;
+            margin-left: 2%;
+            width: 30vh;
+        }
         }
     </style>
 </head>
@@ -147,7 +310,23 @@
         <p>(clique nos ícones das habilidades para ver mais detalhes)</p>
     </div>
     <div id="borda">
-        <div class="topicoATIVAR" id="informacaoDeHabilidade"><img src="htmlpng.png" alt=""></div>
+
+        <div class="topicoATIVAR topicoDESATIVAR" id="informacaoDeHabilidade">
+            <div id="centralizarimgflexi"><img id="imgDesc" src="" alt=""></div>
+            <div id="caixadadescricao">
+                <h1 id="titulodadescricao"></h1>
+                <div id="linhaparaseparar"></div>
+                <div id="centralizarpFlexi">
+                    <P id="descricaoDahabilidade">Sigla para HyperText Markup Language — Linguagem de Marcação de Hipertexto —, o HTML é o componente base da web. Isso quer dizer que ele permite a construção de websites e a inserção de novos conteúdos, como imagens e vídeos, por meio dos hipertextos.</P>
+                </div>
+            </div>
+            <h2 id="exemplotitle">Exemplo:</h2>
+            <div id="exemplo"><p id="exemploP"></p></div>
+            <div id="fecharDesc">
+                <p><a id="link" href="habilidades.html">Fechar</a></p>
+            </div>
+        </div>
+
         <div class="CaixaDeHabilidade" id="item1"><img src="htmlpng.png" alt="">
         <p class="PdeHabilidade">HTML</p>
         </div>
@@ -166,7 +345,35 @@
     </div>
 </div>
 <script>
+    let identificador = 0
     let paginaDeInformacao = document.getElementById("informacaoDeHabilidade")
+    let imagem = document.getElementById("imgDesc")
+    let tituloDaDesc = document.getElementById("titulodadescricao")
+    let Desc = document.getElementById("descricaoDahabilidade")
+    let exemplo = document.getElementById("exemploP")
+    let htmlExemplo = "<h1>Olá mundo</h1>"
+    let htmL = document.getElementById("item1")
+    let csS = document.getElementById("item2")
+    let jS = document.getElementById("item3")
+    let msgHtml = "Sigla para HyperText Markup Language — Linguagem de Marcação de Hipertexto —, o HTML é o componente base da web. Isso quer dizer que ele permite a construção de websites e a inserção de novos conteúdos, como imagens e vídeos, por meio dos hipertextos."
+
+    let msgCss = "CSS é chamado de linguagem Cascading Style Sheet e é usado para estilizar elementos escritos em uma linguagem de marcação como HTML. O CSS separa o conteúdo da representação visual do site."
+
+    let msgJs = "JavaScript é uma linguagem de programação de alto nível que permite implementar itens complexos em páginas da web. Foi criada em 1995 por Brendan Eich enquanto trabalhava na Netscape Communications Corporation."
+
+    htmL.addEventListener("click", function chamarDESprohtml() {
+        paginaDeInformacao.classList.remove("topicoDESATIVAR")
+        imagem.src = "htmlpng.png"
+        tituloDaDesc.innerHTML = "HTML"
+        Desc.innerHTML = msgHtml
+    })
+    htmL.addEventListener("click", function escreverExemplo() {
+        if(identificador < htmlExemplo.length){
+            exemplo.innerHTML += htmlExemplo.charAt(identificador)
+            identificador++
+        }
+        setTimeout(escreverExemplo, 130)
+        })
 </script>
 </body>
 </html>
