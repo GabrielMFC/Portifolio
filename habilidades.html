@@ -36,9 +36,13 @@
             justify-content: center;
             align-items: center;
         }
+        h1{
+            text-align: center;
+        }
         p{
             color: white;
             font-family: 'Pixelify Sans', sans-serif;
+            text-align: center;
         }
         #borda{
             position: absolute;
@@ -70,6 +74,7 @@
             border: 5px solid white;
             position: absolute;
             background-color: var(--vermelho);
+            cursor: pointer;
         }
         #item1{
             top: 15%;
@@ -136,10 +141,10 @@
             background-color: var(--verdeclarin);
             border: 4px solid white;
             z-index: 2;
-        }/*
+        }
         .topicoDESATIVAR{
             z-index: -15;
-        }*/
+        }
         #centralizarimgflexi{
             position: absolute;
             border: 5px solid white;
@@ -266,11 +271,13 @@
         .itemmisterio{
             width: 0vh;
             height: 0vh;
+            background-color: #85A053;
+            z-index: -3;
         }
         .misterio{
             font-size: 0vh;
-            width: 100%;
-            height: 100%;
+            color: #85A053;
+            z-index: -3;
         }
         .topicoATIVAR{
             top: 5%;
@@ -288,7 +295,7 @@
         }
         #caixadadescricao{
             right: 1%;
-            width: 28vh;
+            width: 22vh;
             height: 50vh;
             margin-top: 1%;
             overflow: scroll;
@@ -300,6 +307,11 @@
             bottom: 10%;
             margin-left: 2%;
             width: 30vh;
+        }
+        }
+        @media screen and (min-height: 750px){
+           #caixadadescricao{
+            max-width: 50%;
         }
         }
     </style>
@@ -351,7 +363,10 @@
     let tituloDaDesc = document.getElementById("titulodadescricao")
     let Desc = document.getElementById("descricaoDahabilidade")
     let exemplo = document.getElementById("exemploP")
+    let OlaMundo = "Olá mundo"
     let htmlExemplo = "<h1>Olá mundo</h1>"
+    let cssExemplo = "#OlaMundo{color: blue;}"
+    let jsExemplo = 'console.log("Olá mundo")'
     let htmL = document.getElementById("item1")
     let csS = document.getElementById("item2")
     let jS = document.getElementById("item3")
@@ -367,12 +382,40 @@
         tituloDaDesc.innerHTML = "HTML"
         Desc.innerHTML = msgHtml
     })
-    htmL.addEventListener("click", function escreverExemplo() {
+    htmL.addEventListener("click", function escreverExemploprohtml() {
         if(identificador < htmlExemplo.length){
             exemplo.innerHTML += htmlExemplo.charAt(identificador)
             identificador++
         }
-        setTimeout(escreverExemplo, 130)
+        setTimeout(escreverExemploprohtml, 130)
+        })
+
+        csS.addEventListener("click", function chamarDESprocss() {
+        paginaDeInformacao.classList.remove("topicoDESATIVAR")
+        imagem.src = "css.png"
+        tituloDaDesc.innerHTML = "CSS"
+        Desc.innerHTML = msgCss
+        })
+        csS.addEventListener("click", function escreverExemploprocss() {
+        if(identificador < cssExemplo.length){
+            exemplo.innerHTML += cssExemplo.charAt(identificador)
+            identificador++
+        }
+        setTimeout(escreverExemploprocss, 130)
+        })
+
+        jS.addEventListener("click", function chamarDESprojs () {
+        paginaDeInformacao.classList.remove("topicoDESATIVAR")
+        imagem.src = "js.png"
+        tituloDaDesc.innerHTML = "JS"
+        Desc.innerHTML = msgJs
+        })
+        jS.addEventListener("click", function escreverExemploprojs () {
+            if(identificador < msgJs.length){
+            exemplo.innerHTML +=jsExemplo.charAt(identificador)
+            identificador++
+            }
+            setTimeout(escreverExemploprojs, 130)
         })
 </script>
 </body>
