@@ -118,6 +118,14 @@ html, body{
     height: 25vh;
     top: 0%;
   }
+  #linkvoltar{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .FazerAqlIconeIDeImagemIndisponivelDesaparecer{
     z-index: -1;
   }
