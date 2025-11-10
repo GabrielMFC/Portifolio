@@ -13,13 +13,13 @@ export default function Arm() {
             </div>
             </>
             :
-            isAnimation === true ?
+            isAnimation === "projectsList" ?
             <>
             <div key={1} className="arm armAnimation" style={{backgroundImage: `url(${ArmAsset})`}}></div>
             <ProjectDossier showProjectPage={"activate"}/>
             </>
             :
-            isAnimation === false ?
+            isAnimation === "home" ?
             <>
             <div key={2} className="arm armReverseAnimation" style={{backgroundImage: `url(${ArmAsset})`}}></div>
             <ProjectDossier showProjectPage={"desactivate"}/>

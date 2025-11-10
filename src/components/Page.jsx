@@ -1,9 +1,13 @@
 import { useContext } from "react"
 import { AnimationContext } from "../conexts/isArmAnimate"
 
-export default function Page({Notes, PhotoContainer, title, subTitle, text}){
+export default function Page({Notes, PhotoContainer, title, subTitle, text, GoToButton, SwitchProject}){
     const {isAnimation, setIsAnimation} = useContext(AnimationContext)
     
+    function changeContextValue() {
+        return isAnimation === "initialValue" ? "projectsList": isAnimation === "projectsList"? "home" : isAnimation === "home" ? "projectsList" : ""
+    }
+
     return(
         <div className="dossierPage">
             <div className="centralizeNotesAndPhotos">
@@ -15,9 +19,10 @@ export default function Page({Notes, PhotoContainer, title, subTitle, text}){
                 <h2 className="title">{subTitle}</h2>
                 <p className="text">{text}</p>
             </div>
+            {SwitchProject}
             <div className="centralizeBottomButtons">
-                <button className="bottomButton" onClick={() => {setIsAnimation(isAnimation === "initialValue" ? true : !isAnimation), console.log(isAnimation);
-                }}>{isAnimation === true ? "Fechar" : "Projetos"}</button>
+                <button className="bottomButton" onClick={() => setIsAnimation(changeContextValue())}>{isAnimation === "projectsList" ? "Fechar" : "Projetos"}</button>
+                {GoToButton}
             </div>
         </div>
     )
