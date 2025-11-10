@@ -16,7 +16,8 @@ export default function Page({Notes, PhotoContainer, title, subTitle, text}){
                 <p className="text">{text}</p>
             </div>
             <div className="centralizeBottomButtons">
-                <button className="bottomButton" onClick={() => setIsAnimation(!isAnimation)}>Projetos</button>
+                <button className="bottomButton" onClick={() => {setIsAnimation(isAnimation === "initialValue" ? true : !isAnimation), console.log(isAnimation);
+                }}>{isAnimation === true ? "Fechar" : "Projetos"}</button>
             </div>
         </div>
     )

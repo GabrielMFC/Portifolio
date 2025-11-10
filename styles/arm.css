@@ -1,6 +1,6 @@
-.armAnimation{
-    display: block;
+.arm{
     position: absolute;
+    top: -60vh;
     width: 100vh;
     height: 50vh;
     margin: 0;
@@ -10,13 +10,17 @@
     background-position: center;
     background-repeat: no-repeat;
     z-index: 2;
-    animation: armMove 3s linear forwards;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     z-index: 6;
 }
-
+.armAnimation{
+    animation: armMove 3s linear forwards;
+}
+.armReverseAnimation{
+    animation: armMove 3.1s linear forwards;
+}
 @keyframes armMove {
     0%{
         top: -60vh;

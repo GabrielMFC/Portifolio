@@ -10,10 +10,16 @@
     border-top-right-radius: 2vh;
     border-end-end-radius: 2vh;
 }
-.projectContainer{
+.activate{
     position: absolute;
     top: -70vh;
     animation: projectAnimation 1.5s linear forwards;
+    z-index: 5;
+}
+
+.desactivate{
+    position: absolute;
+    animation: reverseProjectAnimation 3.5s linear forwards;
     z-index: 5;
 }
 
@@ -25,7 +31,20 @@
         top: 10vh;
     }
 }
-
+@keyframes reverseProjectAnimation {
+    0%{
+        top: 10vh;
+    }
+    50%{
+        top: 10vh;
+    }
+    60%{
+        top: 10vh;
+    }
+    100%{
+        top: -80vh;
+    }
+}
 .dossierPage{
     position: absolute;
     width: 92%;

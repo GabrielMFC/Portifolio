@@ -1,9 +1,9 @@
 import ProjectPage from "./projectPage/ProjectPage"
 import "../../styles/dossier.css"
 
-export default function ProjectDossier() {
+export default function ProjectDossier({showProjectPage}) {
     return(
-        <div className="dossierContainer projectContainer">
+        <div className={"dossierContainer "  + showProjectPage}>
             <ProjectPage/>
         </div>
     )
