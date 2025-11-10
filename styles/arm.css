@@ -1,0 +1,33 @@
+.armAnimation{
+    display: block;
+    position: absolute;
+    width: 100vh;
+    height: 50vh;
+    margin: 0;
+    transform: rotate(90deg);
+    z-index: 2;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+    animation: armMove 3s linear forwards;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 6;
+}
+
+@keyframes armMove {
+    0%{
+        top: -60vh;
+    }
+    50%{
+        top: 15vh;
+    }
+    65%{
+        top: 15vh;
+    }
+    100%{
+        top: -60vh;
+    }
+}
