@@ -1,8 +1,15 @@
+import { useContext } from "react"
+import { projectControllerContext } from "../../conexts/projectController"
+import projectsData from "../../projectsData"
+import { AnimationContext } from "../../conexts/isArmAnimate"
+
 export default function SwitchProject() {
+    const{setProjectController} = useContext(projectControllerContext)
+    
     return(
         <div>
-            <button>Informs</button>
-            <button>Barberagem</button>
+            <button onClick={() => {setProjectController(projectsData.inForms)}}>Informs</button>
+            <button onClick={() => {setProjectController(projectsData.barberagem)}}>Barberagem</button>
         </div>
     )
 }

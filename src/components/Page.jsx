@@ -5,7 +5,7 @@ export default function Page({Notes, PhotoContainer, title, subTitle, text, GoTo
     const {isAnimation, setIsAnimation} = useContext(AnimationContext)
     
     function changeContextValue() {
-        return isAnimation === "initialValue" ? "projectsList": isAnimation === "projectsList"? "home" : isAnimation === "home" ? "projectsList" : ""
+        return isAnimation === "initialValue" ? "projectsList": isAnimation === "projectsList"? "home" : isAnimation === "home" ? "projectsList" : "projectPage"
     }
 
     return(
@@ -21,7 +21,8 @@ export default function Page({Notes, PhotoContainer, title, subTitle, text, GoTo
             </div>
             {SwitchProject}
             <div className="centralizeBottomButtons">
-                <button className="bottomButton" onClick={() => setIsAnimation(changeContextValue())}>{isAnimation === "projectsList" ? "Fechar" : "Projetos"}</button>
+                <button className="bottomButton" onClick={() => {setIsAnimation(changeContextValue()), console.log(isAnimation);
+                }}>{isAnimation === "projectsList" ? "Fechar" : "Projetos"}</button>
                 {GoToButton}
             </div>
         </div>
