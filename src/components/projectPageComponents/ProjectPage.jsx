@@ -2,6 +2,7 @@ import Page from "../Page"
 import Notes from "../Notes"
 import PhotoContainer from "../PhotoContainer"
 import SwitchProject from "./SwitchProject"
+import GoToButton from "./GoToButton"
 import { useContext } from "react"
 import { projectControllerContext } from "../../conexts/projectController"
 
@@ -16,6 +17,7 @@ export default function ProjectPage() {
             <PhotoContainer/>
         }
         SwitchProject={<SwitchProject/>}
+        GoToButton={<GoToButton link={projectController.link}/>}
         />
         </>
     )

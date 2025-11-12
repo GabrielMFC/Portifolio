@@ -1,7 +1,6 @@
 import { useContext } from "react"
 import { projectControllerContext } from "../../conexts/projectController"
 import projectsData from "../../projectsData"
-import { AnimationContext } from "../../conexts/isArmAnimate"
 
 export default function SwitchProject() {
     const{setProjectController} = useContext(projectControllerContext)

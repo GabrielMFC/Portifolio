@@ -1,5 +1,5 @@
-export default function GoToButton({projectLink}){
+export default function GoToButton({link}){
     return(
-        <button><a style={{color: "white"}} href={projectLink}>Cena do crime</a></button>
+        <button><a style={{color: "white"}} href={link} target="_blank">Cena do crime</a></button>
     )
 }
