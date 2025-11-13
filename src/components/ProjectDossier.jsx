@@ -1,10 +1,10 @@
-import ProjectsContainer from "./projectPageComponents/ProjectsContainer"
+import ProjectPage from "./projectPageComponents/ProjectPage"
 import "../../styles/dossier.css"
 
-export default function ProjectDossier({showProjectPage}) {
+export default function ProjectDossier() {
     return(
-        <div className={"dossierContainer "  + showProjectPage}>
-            <ProjectsContainer/>
+        <div className="dossierContainer" style={{zIndex: "6"}}>
+            <ProjectPage/>
         </div>
     )
 }

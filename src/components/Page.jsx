@@ -1,18 +1,11 @@
-import { useContext } from "react"
-import { AnimationContext } from "../conexts/isArmAnimate"
+import NavigationButton from "./NavigationButton"
 
-export default function Page({Notes, PhotoContainer, title, subTitle, text, GoToButton, SwitchProject}){
-    const {isAnimation, setIsAnimation} = useContext(AnimationContext)
-    
-    function changeContextValue() {
-        return isAnimation === "initialValue" ? "projectsList": isAnimation === "projectsList"? "home" : isAnimation === "home" ? "projectsList" : "projectPage"
-    }
-
+export default function Page({Notes, Photo, title, subTitle, text, GoToButton, SwitchProject, NavigationButtonProps}){
     return(
         <div className="dossierPage">
             <div className="centralizeNotesAndPhotos">
                 {Notes}
-                {PhotoContainer}
+                {Photo}
             </div>
             <div className="centralizeDossierText">
                 <h1 className="title">{title}</h1>
@@ -21,8 +14,8 @@ export default function Page({Notes, PhotoContainer, title, subTitle, text, GoTo
             </div>
             {SwitchProject}
             <div className="centralizeBottomButtons">
-                <button className="bottomButton" onClick={() => {setIsAnimation(changeContextValue()), console.log(isAnimation);
-                }}>{isAnimation === "projectsList" ? "Fechar" : "Projetos"}</button>
+                <NavigationButton {...NavigationButtonProps}
+                />
                 {GoToButton}
             </div>
         </div>

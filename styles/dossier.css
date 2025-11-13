@@ -68,14 +68,28 @@
     font-weight: bold; 
     font-size: 0.75rem;
 }
-.photoContainer{
-    width: 3vh;
-    height: 3vh;
+.projectPhotoContainer{
+    position: relative;
+    width: 15vh;
+    height: 20vh;
     background-color: #DDDFDD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.photoContainer{
+    position: relative;
+    width: 15vh;
+    height: 28vh;
+    background-color: #DDDFDD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .photo{
-    width: 2vh;
-    height: 2vh;
+    height: 100%;
+    width: 100%;
+    object-position: center;
     background-color: #616161;
 }
 .centralizeNotesAndPhotos{

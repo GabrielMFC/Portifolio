@@ -1,6 +1,6 @@
 import Page from "../Page"
 import Notes from "../Notes"
-import PhotoContainer from "../PhotoContainer"
+import Photo from "../Photo"
 import SwitchProject from "./SwitchProject"
 import GoToButton from "./GoToButton"
 import { useContext } from "react"
@@ -13,11 +13,11 @@ export default function ProjectPage() {
         <>
         <Page title={"Projeto"} subTitle={projectController.name} text={projectController.desc} Notes={
             <Notes info={{name: projectController.name, whats: "(+55) 24 998771866", email: "ggezcom991gh@gmail.com"}}/>
-        } PhotoContainer={
-            <PhotoContainer/>
+        } Photo={
+            <Photo image={projectController.image} type={"photoContainer"}/>
         }
-        SwitchProject={<SwitchProject/>}
         GoToButton={<GoToButton link={projectController.link}/>}
+        NavigationButtonProps={{navigateTo:"/projectList",updateAnimationValue:""}}
         />
         </>
     )
